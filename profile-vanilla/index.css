@@ -24,3 +24,9 @@ input, button {
     outline: none;
     margin: 1rem;
 }
+
+#checkbox {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    align-items: center;
+}
