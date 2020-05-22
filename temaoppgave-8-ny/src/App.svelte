@@ -3,15 +3,15 @@
 	import {InfoIcon} from 'svelte-eva-icons'
 	import {CloseCircleIcon} from 'svelte-eva-icons'
 
-	let goal = 'Lego' //tøm for å restarte
-	let cost = 200 //bytt til 0 for å restarte
+	let goal = '' //tøm for å restarte
+	let cost = 0 //bytt til 0 for å restarte
 	let savings = 0
 
 	$: diff = cost - savings
 	$: achieved = diff <= 0 ? true : false
 	$: console.log(taskList)
 
-	let regGoal = true //bytt til false for å restarte
+	let regGoal = false //bytt til false for å restarte
 
 	let showTasklist = false
 	let taskList = []
@@ -49,11 +49,10 @@
 <main>
 	<img id="logo" src="./assets/logo.png" alt="logo">
 	<!-- Sparemål -->
-	<section>
 		<div class="inputs">
-			{#if !regGoal}
+		{#if !regGoal}
 			<!-- Steg 1 -->
-			<h3>Registrer sparemål og kostnad</h3>
+			<p>Registrer sparemål og kostnad</p>
 			<input 
 			type="text"
 			bind:value={goal} 
@@ -69,15 +68,15 @@
 		{:else}
 			{#if !achieved}
 <!-- Arbeidsoppgaver -->
-				<h3>Registrer arbeidsoppgave og beløp</h3>
+				<p>Registrer arbeidsoppgave og beløp</p>
 				<input bind:this={task} placeholder='Arbeidsoppgave'/>
 				<div id="verdiknapper">
-					<div id="ti" class="knapper" on:click={()=>taskPrice=10} on:click={addTask}></div>
-					<div id="tyve" class="knapper" on:click={()=>taskPrice=20} on:click={addTask}></div>
-					<div id="femti" class="knapper" on:click={()=>taskPrice=50} on:click={addTask}></div>
-					<div id="hundre" class="knapper" on:click={()=>taskPrice=100} on:click={addTask}></div>
+					<img src="./assets/ti.png" alt="ti" on:click={()=>taskPrice=10} on:click={addTask}>
+					<img src="./assets/tyve.png" alt="tyve" on:click={()=>taskPrice=20} on:click={addTask}>
+					<img src="./assets/femti.png" alt="femti" on:click={()=>taskPrice=50} on:click={addTask}>
+					<img src="./assets/hundre.png" alt="hundre" on:click={()=>taskPrice=100} on:click={addTask}>
 <!-- Animasjon -->
-					<!-- <div on:animationstart={addTask} on:animationend={piggyFilled} class="animation"><img src="./assets/krone.png" alt="kronestykke"></div> -->
+					<!-- <div id="animation"><img src="./assets/krone.png" alt="kronestykke"></div> -->
 				</div>
 			{:else}
 <!-- Fullført -->
@@ -106,11 +105,11 @@
 					<CloseCircleIcon />
 					</div>
 					<div class="taskList">
-						<h4>Arbeidsoppgaver</h4>
-						<h4>Beløp</h4>
+						<label><b>Arbeidsoppgaver</b></label>
+						<label><b>Beløp</b></label>
 						{#each taskList as item}
-							<p>{item.title}</p>
-							<p>{item.cost} kr</p>
+							<li>{item.title}</li>
+							<li>{item.cost} kr</li>
 						{/each}
 					</div>
 				</div>
@@ -118,13 +117,10 @@
 			</div>
 
 			<div id="goal">
-				<p><label><b>Sparemål</b></label> {goal}</p>
+				<p><label><b>Sparemål</b></label> {goal} </p>
 				<p><label><b>Gjenstående beløp</b></label> {diff} kr</p>
 			</div>	
 		</div>
-
-		
-	</section>
 </main>
 
 <style>
@@ -137,34 +133,27 @@
 
 	main {
 		display: grid;
-		place-items: center;
-		width: 100%;
-		height: 100%;
 		position: relative;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		place-items: center;
+		width: 100vw;
+		height: 100vh;
 	}
 
 	#logo {
-		width: 25vw;
+		width: 30vw;
 		position: absolute;
 		top: 4rem;	
 	}
 
-	section {
-		display: grid;
-		place-items: center;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		width: 100%;
-		height: 100%;
-	}
-
 	.inputs {
 		display: grid;
-		padding: 2rem;
+		place-items: center;
+		width: 35vw;
+		padding: 1rem;
 		border-radius: 20px;
 		background-color: #8AB8EF;
 		color: white;
-		width: 35vw;
-		place-items: center;
 	}
 
 	input {
@@ -187,30 +176,25 @@
 		color: #8AB8EF;
 	}
 
-	.pig{
-		position:relative;
-		display:grid;
-		place-items:center;
-	}
-
-	.piggybank {
-		display: grid;
-		gap: 2rem;
-	}
-
 	.piggybank img {
 		width: 35vw;
 	}
 
+	.pig{
+		display:grid;
+		position:relative;
+		place-items:center;
+	}
+
 	.savings{
 		display: grid;
+		position:absolute;
 		grid-template-columns: 2fr 1fr;
 		place-items: center;
-		position:absolute;
 		background-color: white;
 		border: 2px solid black;
-		border-radius: 20px;
-		padding: .5rem .5rem .5rem 1rem;
+		border-radius: 1rem;
+		padding: 0 .5rem .5rem 1rem;
 		right: 7rem;
 		font-size: 2vw;
 	}
@@ -218,12 +202,12 @@
 	.infoIcon {
 		max-width: 1.5rem;
 		cursor: pointer;
-		margin-bottom: 3rem;
+		margin-bottom: 5vh;
 	}
 
 	.tasks {
 		display: grid;
-		grid-template-rows: 1fr 10fr;
+		justify-content: space-between;
 		background-color: white;
 		border: 2px solid black;
 		border-radius: 20px;
@@ -239,68 +223,35 @@
 	.taskList {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		text-align: center;
-	}
-
-	/* .animation img {
-		background-size: cover;
-		width: 3vw;
-	}
-
-	.animation {
-		position: absolute;
-		top: 0;
-		right: 17rem;
-		animation: coinFalling 1s linear forwards;
-		z-index: 1;
-	} */
-
-	@keyframes coinFalling {
-		to {
-			transform: translateY(250px);
-		}
+		list-style-type: none;
 	}
 
 	#goal {
 		display: grid;
+		width: 35vw;
 		grid-template-columns: 1fr 1fr;
-		border-radius: 20px;
+		justify-items: center;
+		justify-content: space-between;
+		margin-top: 2rem;
 		padding: 0 1rem 0 1rem;
+		border-radius: 20px;
 		background-color: #8AB8EF;
 		color: white;
-		place-items: center;
-		text-align: center;
 	}
 
 	/* Oppgaveside */
 	#verdiknapper {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		padding-top: 1rem;
-		gap: 2.4vw;
+		grid-auto-flow: column;
+		width: 25vw;
+		justify-content: space-between;
 		cursor: pointer;
+		margin-top: 1rem;
 	}
 
-	.knapper {
-		width: 4.5vw;
-    	height: 4.5vw; /* hvorfor blir det rart med vh? */
+	#verdiknapper img {
+		width: 5vw;
      	background-size: cover;
-	}
-
-	#ti {
-		background-image: url('../assets/ti.png')
-	}
-
-	#tyve {
-		background-image: url('../assets/tyve.png')
-	}
-
-	#femti {
-		background-image: url('../assets/femti.png')
-	}
-
-	#hundre {
-		background-image: url('../assets/hundre.png')
 	}
 
 	/* Fullført sparing */
@@ -308,9 +259,90 @@
 		width: 10vw;
 	}
 
-	@media (max-width:700px) {
-
-
+	/* #animation img {
+		width: 3vw;
 	}
 
+	#animation {
+		position: absolute;
+		top: 0;
+		right: 17rem;
+		animation: coinFalling 1s linear forwards;
+		z-index: 1;
+	}
+
+	@keyframes coinFalling {
+		to {
+			transform: translateY(250px);
+		}
+	} */
+
+	@media (max-width:800px) {
+		main {
+			grid-auto-flow: row;
+			padding-top: 3rem;
+			grid-template-rows: 1fr 1fr;
+		}
+
+		#logo {
+			top: 2rem;
+			width: 15rem;
+		}
+
+		.inputs {
+			width: 100vw;
+			border-radius: 0;
+		}
+
+		input {
+			width: 20rem;
+		}
+
+		#verdiknapper {
+			width: 20rem;
+		}
+
+		#verdiknapper img {
+			width: 4rem;
+		}
+
+		.piggybank {
+			display: grid;
+			place-items: center;
+		}
+
+		.piggybank img {
+			width: 20rem;
+		}
+
+		.savings {
+			right: 3.3rem;
+			font-size: 1.2rem;
+		}
+
+		.tasks {
+			grid-auto-flow: row;
+		}
+
+		#goal {
+			width: 100vw;
+			border-radius: 0;
+			bottom: 0;
+		}
+
+		/* #animation img {
+			width: 8vw;
+		}
+
+		#animation {
+			top: 42vh;
+			right: 9.2rem;
+		}
+
+		@keyframes coinFalling {
+		to {
+			transform: translateY(93px);
+			}
+		} */
+	}
 </style>

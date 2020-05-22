@@ -576,7 +576,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (82:3) {:else}
+    // (81:3) {:else}
     function create_else_block_1(ctx) {
     	let img;
     	let img_src_value;
@@ -598,11 +598,11 @@ var app = (function () {
     			attr_dev(img, "id", "balloons");
     			if (img.src !== (img_src_value = "./assets/balloons.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "ballonger");
-    			attr_dev(img, "class", "svelte-1ant18e");
-    			add_location(img, file$2, 83, 4, 2156);
-    			add_location(p, file$2, 84, 4, 2224);
-    			attr_dev(button, "class", "svelte-1ant18e");
-    			add_location(button, file$2, 85, 4, 2271);
+    			attr_dev(img, "class", "svelte-1q3qhq7");
+    			add_location(img, file$2, 82, 4, 2087);
+    			add_location(p, file$2, 83, 4, 2155);
+    			attr_dev(button, "class", "svelte-1q3qhq7");
+    			add_location(button, file$2, 84, 4, 2202);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -627,98 +627,106 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(82:3) {:else}",
+    		source: "(81:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:3) {#if !achieved}
+    // (69:3) {#if !achieved}
     function create_if_block_2(ctx) {
-    	let h3;
+    	let p;
     	let t1;
     	let input;
     	let t2;
-    	let div4;
-    	let div0;
+    	let div;
+    	let img0;
+    	let img0_src_value;
     	let t3;
-    	let div1;
+    	let img1;
+    	let img1_src_value;
     	let t4;
-    	let div2;
+    	let img2;
+    	let img2_src_value;
     	let t5;
-    	let div3;
+    	let img3;
+    	let img3_src_value;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			h3 = element("h3");
-    			h3.textContent = "Registrer arbeidsoppgave og beløp";
+    			p = element("p");
+    			p.textContent = "Registrer arbeidsoppgave og beløp";
     			t1 = space();
     			input = element("input");
     			t2 = space();
-    			div4 = element("div");
-    			div0 = element("div");
+    			div = element("div");
+    			img0 = element("img");
     			t3 = space();
-    			div1 = element("div");
+    			img1 = element("img");
     			t4 = space();
-    			div2 = element("div");
+    			img2 = element("img");
     			t5 = space();
-    			div3 = element("div");
-    			add_location(h3, file$2, 71, 4, 1451);
+    			img3 = element("img");
+    			add_location(p, file$2, 70, 4, 1432);
     			attr_dev(input, "placeholder", "Arbeidsoppgave");
-    			attr_dev(input, "class", "svelte-1ant18e");
-    			add_location(input, file$2, 72, 4, 1498);
-    			attr_dev(div0, "id", "ti");
-    			attr_dev(div0, "class", "knapper svelte-1ant18e");
-    			add_location(div0, file$2, 74, 5, 1586);
-    			attr_dev(div1, "id", "tyve");
-    			attr_dev(div1, "class", "knapper svelte-1ant18e");
-    			add_location(div1, file$2, 75, 5, 1674);
-    			attr_dev(div2, "id", "femti");
-    			attr_dev(div2, "class", "knapper svelte-1ant18e");
-    			add_location(div2, file$2, 76, 5, 1764);
-    			attr_dev(div3, "id", "hundre");
-    			attr_dev(div3, "class", "knapper svelte-1ant18e");
-    			add_location(div3, file$2, 77, 5, 1855);
-    			attr_dev(div4, "id", "verdiknapper");
-    			attr_dev(div4, "class", "svelte-1ant18e");
-    			add_location(div4, file$2, 73, 4, 1557);
+    			attr_dev(input, "class", "svelte-1q3qhq7");
+    			add_location(input, file$2, 71, 4, 1477);
+    			if (img0.src !== (img0_src_value = "./assets/ti.png")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "ti");
+    			attr_dev(img0, "class", "svelte-1q3qhq7");
+    			add_location(img0, file$2, 73, 5, 1565);
+    			if (img1.src !== (img1_src_value = "./assets/tyve.png")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "tyve");
+    			attr_dev(img1, "class", "svelte-1q3qhq7");
+    			add_location(img1, file$2, 74, 5, 1654);
+    			if (img2.src !== (img2_src_value = "./assets/femti.png")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "alt", "femti");
+    			attr_dev(img2, "class", "svelte-1q3qhq7");
+    			add_location(img2, file$2, 75, 5, 1747);
+    			if (img3.src !== (img3_src_value = "./assets/hundre.png")) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img3, "alt", "hundre");
+    			attr_dev(img3, "class", "svelte-1q3qhq7");
+    			add_location(img3, file$2, 76, 5, 1842);
+    			attr_dev(div, "id", "verdiknapper");
+    			attr_dev(div, "class", "svelte-1q3qhq7");
+    			add_location(div, file$2, 72, 4, 1536);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h3, anchor);
+    			insert_dev(target, p, anchor);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, input, anchor);
     			/*input_binding*/ ctx[14](input);
     			insert_dev(target, t2, anchor);
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div0);
-    			append_dev(div4, t3);
-    			append_dev(div4, div1);
-    			append_dev(div4, t4);
-    			append_dev(div4, div2);
-    			append_dev(div4, t5);
-    			append_dev(div4, div3);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img0);
+    			append_dev(div, t3);
+    			append_dev(div, img1);
+    			append_dev(div, t4);
+    			append_dev(div, img2);
+    			append_dev(div, t5);
+    			append_dev(div, img3);
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_1*/ ctx[15], false, false, false),
-    				listen_dev(div0, "click", /*addTask*/ ctx[11], false, false, false),
-    				listen_dev(div1, "click", /*click_handler_2*/ ctx[16], false, false, false),
-    				listen_dev(div1, "click", /*addTask*/ ctx[11], false, false, false),
-    				listen_dev(div2, "click", /*click_handler_3*/ ctx[17], false, false, false),
-    				listen_dev(div2, "click", /*addTask*/ ctx[11], false, false, false),
-    				listen_dev(div3, "click", /*click_handler_4*/ ctx[18], false, false, false),
-    				listen_dev(div3, "click", /*addTask*/ ctx[11], false, false, false)
+    				listen_dev(img0, "click", /*click_handler_1*/ ctx[15], false, false, false),
+    				listen_dev(img0, "click", /*addTask*/ ctx[11], false, false, false),
+    				listen_dev(img1, "click", /*click_handler_2*/ ctx[16], false, false, false),
+    				listen_dev(img1, "click", /*addTask*/ ctx[11], false, false, false),
+    				listen_dev(img2, "click", /*click_handler_3*/ ctx[17], false, false, false),
+    				listen_dev(img2, "click", /*addTask*/ ctx[11], false, false, false),
+    				listen_dev(img3, "click", /*click_handler_4*/ ctx[18], false, false, false),
+    				listen_dev(img3, "click", /*addTask*/ ctx[11], false, false, false)
     			];
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(p);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(input);
     			/*input_binding*/ ctx[14](null);
     			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div);
     			run_all(dispose);
     		}
     	};
@@ -727,16 +735,16 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(70:3) {#if !achieved}",
+    		source: "(69:3) {#if !achieved}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:3) {#if !regGoal}
+    // (53:2) {#if !regGoal}
     function create_if_block_1(ctx) {
-    	let h3;
+    	let p;
     	let t1;
     	let input0;
     	let t2;
@@ -753,8 +761,8 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			h3 = element("h3");
-    			h3.textContent = "Registrer sparemål og kostnad";
+    			p = element("p");
+    			p.textContent = "Registrer sparemål og kostnad";
     			t1 = space();
     			input0 = element("input");
     			t2 = space();
@@ -762,20 +770,20 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Neste";
-    			add_location(h3, file$2, 55, 3, 1092);
+    			add_location(p, file$2, 54, 3, 1075);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Sparemål");
-    			attr_dev(input0, "class", "svelte-1ant18e");
-    			add_location(input0, file$2, 56, 3, 1134);
+    			attr_dev(input0, "class", "svelte-1q3qhq7");
+    			add_location(input0, file$2, 55, 3, 1115);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "Kostnad");
-    			attr_dev(input1, "class", "svelte-1ant18e");
-    			add_location(input1, file$2, 62, 3, 1257);
-    			attr_dev(button, "class", "next svelte-1ant18e");
-    			add_location(button, file$2, 67, 3, 1334);
+    			attr_dev(input1, "class", "svelte-1q3qhq7");
+    			add_location(input1, file$2, 61, 3, 1238);
+    			attr_dev(button, "class", "next svelte-1q3qhq7");
+    			add_location(button, file$2, 66, 3, 1315);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h3, anchor);
+    			insert_dev(target, p, anchor);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, input0, anchor);
     			set_input_value(input0, /*goal*/ ctx[0]);
@@ -804,7 +812,7 @@ var app = (function () {
     			input1_updating = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(p);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(input0);
     			if (detaching) detach_dev(t2);
@@ -819,22 +827,24 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(54:3) {#if !regGoal}",
+    		source: "(53:2) {#if !regGoal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (102:4) {:else}
+    // (101:4) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let div0;
     	let t0;
     	let div1;
-    	let h40;
+    	let label0;
+    	let b0;
     	let t2;
-    	let h41;
+    	let label1;
+    	let b1;
     	let t4;
     	let current;
     	let dispose;
@@ -854,25 +864,29 @@ var app = (function () {
     			create_component(closecircleicon.$$.fragment);
     			t0 = space();
     			div1 = element("div");
-    			h40 = element("h4");
-    			h40.textContent = "Arbeidsoppgaver";
+    			label0 = element("label");
+    			b0 = element("b");
+    			b0.textContent = "Arbeidsoppgaver";
     			t2 = space();
-    			h41 = element("h4");
-    			h41.textContent = "Beløp";
+    			label1 = element("label");
+    			b1 = element("b");
+    			b1.textContent = "Beløp";
     			t4 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "closeIcon svelte-1ant18e");
-    			add_location(div0, file$2, 103, 5, 2692);
-    			add_location(h40, file$2, 108, 6, 2831);
-    			add_location(h41, file$2, 109, 6, 2862);
-    			attr_dev(div1, "class", "taskList svelte-1ant18e");
-    			add_location(div1, file$2, 107, 5, 2802);
-    			attr_dev(div2, "class", "tasks svelte-1ant18e");
-    			add_location(div2, file$2, 102, 4, 2667);
+    			attr_dev(div0, "class", "closeIcon svelte-1q3qhq7");
+    			add_location(div0, file$2, 102, 5, 2623);
+    			add_location(b0, file$2, 107, 13, 2769);
+    			add_location(label0, file$2, 107, 6, 2762);
+    			add_location(b1, file$2, 108, 13, 2813);
+    			add_location(label1, file$2, 108, 6, 2806);
+    			attr_dev(div1, "class", "taskList svelte-1q3qhq7");
+    			add_location(div1, file$2, 106, 5, 2733);
+    			attr_dev(div2, "class", "tasks svelte-1q3qhq7");
+    			add_location(div2, file$2, 101, 4, 2598);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -880,9 +894,11 @@ var app = (function () {
     			mount_component(closecircleicon, div0, null);
     			append_dev(div2, t0);
     			append_dev(div2, div1);
-    			append_dev(div1, h40);
+    			append_dev(div1, label0);
+    			append_dev(label0, b0);
     			append_dev(div1, t2);
-    			append_dev(div1, h41);
+    			append_dev(div1, label1);
+    			append_dev(label1, b1);
     			append_dev(div1, t4);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -938,14 +954,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(102:4) {:else}",
+    		source: "(101:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:4) {#if !showTasklist}
+    // (92:4) {#if !showTasklist}
     function create_if_block(ctx) {
     	let img;
     	let img_src_value;
@@ -969,12 +985,12 @@ var app = (function () {
     			create_component(infoicon.$$.fragment);
     			if (img.src !== (img_src_value = "./assets/piggybank.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Sparegris");
-    			attr_dev(img, "class", "svelte-1ant18e");
-    			add_location(img, file$2, 93, 4, 2443);
-    			attr_dev(div0, "class", "infoIcon svelte-1ant18e");
-    			add_location(div0, file$2, 96, 5, 2543);
-    			attr_dev(div1, "class", "savings svelte-1ant18e");
-    			add_location(div1, file$2, 94, 4, 2498);
+    			attr_dev(img, "class", "svelte-1q3qhq7");
+    			add_location(img, file$2, 92, 4, 2374);
+    			attr_dev(div0, "class", "infoIcon svelte-1q3qhq7");
+    			add_location(div0, file$2, 95, 5, 2474);
+    			attr_dev(div1, "class", "savings svelte-1q3qhq7");
+    			add_location(div1, file$2, 93, 4, 2429);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1012,51 +1028,51 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(93:4) {#if !showTasklist}",
+    		source: "(92:4) {#if !showTasklist}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (111:6) {#each taskList as item}
+    // (110:6) {#each taskList as item}
     function create_each_block(ctx) {
-    	let p0;
+    	let li0;
     	let t0_value = /*item*/ ctx[22].title + "";
     	let t0;
     	let t1;
-    	let p1;
+    	let li1;
     	let t2_value = /*item*/ ctx[22].cost + "";
     	let t2;
     	let t3;
 
     	const block = {
     		c: function create() {
-    			p0 = element("p");
+    			li0 = element("li");
     			t0 = text(t0_value);
     			t1 = space();
-    			p1 = element("p");
+    			li1 = element("li");
     			t2 = text(t2_value);
     			t3 = text(" kr");
-    			add_location(p0, file$2, 111, 7, 2915);
-    			add_location(p1, file$2, 112, 7, 2942);
+    			add_location(li0, file$2, 110, 7, 2872);
+    			add_location(li1, file$2, 111, 7, 2901);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p0, anchor);
-    			append_dev(p0, t0);
+    			insert_dev(target, li0, anchor);
+    			append_dev(li0, t0);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, p1, anchor);
-    			append_dev(p1, t2);
-    			append_dev(p1, t3);
+    			insert_dev(target, li1, anchor);
+    			append_dev(li1, t2);
+    			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*taskList*/ 32 && t0_value !== (t0_value = /*item*/ ctx[22].title + "")) set_data_dev(t0, t0_value);
     			if (dirty & /*taskList*/ 32 && t2_value !== (t2_value = /*item*/ ctx[22].cost + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(li0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(li1);
     		}
     	};
 
@@ -1064,7 +1080,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(111:6) {#each taskList as item}",
+    		source: "(110:6) {#each taskList as item}",
     		ctx
     	});
 
@@ -1076,7 +1092,6 @@ var app = (function () {
     	let img;
     	let img_src_value;
     	let t0;
-    	let section;
     	let div0;
     	let t1;
     	let div3;
@@ -1123,7 +1138,6 @@ var app = (function () {
     			main = element("main");
     			img = element("img");
     			t0 = space();
-    			section = element("section");
     			div0 = element("div");
     			if_block0.c();
     			t1 = space();
@@ -1149,27 +1163,25 @@ var app = (function () {
     			attr_dev(img, "id", "logo");
     			if (img.src !== (img_src_value = "./assets/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			attr_dev(img, "class", "svelte-1ant18e");
-    			add_location(img, file$2, 49, 1, 948);
-    			attr_dev(div0, "class", "inputs svelte-1ant18e");
-    			add_location(div0, file$2, 52, 2, 1031);
-    			attr_dev(div1, "class", "pig svelte-1ant18e");
-    			add_location(div1, file$2, 91, 3, 2394);
-    			add_location(b0, file$2, 120, 14, 3055);
-    			add_location(label0, file$2, 120, 7, 3048);
-    			add_location(p0, file$2, 120, 4, 3045);
-    			add_location(b1, file$2, 121, 14, 3104);
-    			add_location(label1, file$2, 121, 7, 3097);
-    			add_location(p1, file$2, 121, 4, 3094);
+    			attr_dev(img, "class", "svelte-1q3qhq7");
+    			add_location(img, file$2, 49, 1, 943);
+    			attr_dev(div0, "class", "inputs svelte-1q3qhq7");
+    			add_location(div0, file$2, 51, 2, 1015);
+    			attr_dev(div1, "class", "pig svelte-1q3qhq7");
+    			add_location(div1, file$2, 90, 3, 2325);
+    			add_location(b0, file$2, 119, 14, 3016);
+    			add_location(label0, file$2, 119, 7, 3009);
+    			add_location(p0, file$2, 119, 4, 3006);
+    			add_location(b1, file$2, 120, 14, 3066);
+    			add_location(label1, file$2, 120, 7, 3059);
+    			add_location(p1, file$2, 120, 4, 3056);
     			attr_dev(div2, "id", "goal");
-    			attr_dev(div2, "class", "svelte-1ant18e");
-    			add_location(div2, file$2, 119, 3, 3025);
-    			attr_dev(div3, "class", "piggybank svelte-1ant18e");
-    			add_location(div3, file$2, 90, 2, 2367);
-    			attr_dev(section, "class", "svelte-1ant18e");
-    			add_location(section, file$2, 51, 1, 1019);
-    			attr_dev(main, "class", "svelte-1ant18e");
-    			add_location(main, file$2, 48, 0, 940);
+    			attr_dev(div2, "class", "svelte-1q3qhq7");
+    			add_location(div2, file$2, 118, 3, 2986);
+    			attr_dev(div3, "class", "piggybank svelte-1q3qhq7");
+    			add_location(div3, file$2, 89, 2, 2298);
+    			attr_dev(main, "class", "svelte-1q3qhq7");
+    			add_location(main, file$2, 48, 0, 935);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1178,11 +1190,10 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			append_dev(main, img);
     			append_dev(main, t0);
-    			append_dev(main, section);
-    			append_dev(section, div0);
+    			append_dev(main, div0);
     			if_block0.m(div0, null);
-    			append_dev(section, t1);
-    			append_dev(section, div3);
+    			append_dev(main, t1);
+    			append_dev(main, div3);
     			append_dev(div3, div1);
     			if_blocks[current_block_type_index].m(div1, null);
     			append_dev(div3, t2);
@@ -1271,10 +1282,10 @@ var app = (function () {
     const click_handler = event => event.target.value = "";
 
     function instance($$self, $$props, $$invalidate) {
-    	let goal = "Lego"; //tøm for å restarte
-    	let cost = 200; //bytt til 0 for å restarte
+    	let goal = ""; //tøm for å restarte
+    	let cost = 0; //bytt til 0 for å restarte
     	let savings = 0;
-    	let regGoal = true; //bytt til false for å restarte
+    	let regGoal = false; //bytt til false for å restarte
     	let showTasklist = false;
     	let taskList = [];
     	let task;
