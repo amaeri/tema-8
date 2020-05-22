@@ -1,23 +1,6 @@
-# Electron Forge + Svelte  Starter
+# Sparegrisen
 
-Get up and running with 💪 Svelte & ⚡ Electron. 
+Dette er en app som skal motivere barn til å hjelpe til mer hjemme, samt lære seg verdien av penger.
 
-## Usage
-
-```
-git clone https://github.com/codediodeio/electron-forge-svelte.git my-app
-cd my-app
-
-npm install
-npm start
-```
-
-![svelte electron](https://firebasestorage.googleapis.com/v0/b/fireship-app.appspot.com/o/assets%2Felectron-svelte-hello.png?alt=media&token=0d3ecb24-3024-4358-ac26-7676b3e60fa1)
-
-## Notes
-
-- src/index.js - Main electron process. 
-- src/svelte.js - Svelte app entrypoint. 
-
-Setup [Electron with Svelte](https://fireship.io/snippets/svelte-electron-setup) from scratch. 
-Build cool projects with [Electron](https://fireship.io/tags/electron). 
+## Forklaring
+Først skal det komme et inputfelt der brukeren skal legge til sparemålet sitt, samt kostnaden på dette. Når denne funksjonen er utført, vil brukeren få opp et nytt inputfelt der de kan registrere arbeidsoppgave og beløp, hver registrering vil da trekkes fra kostnaden på sparemålet. De vil hele tiden se hvor mye penger som er i sparegrisen, samt hvor mye som gjenstår av beløpet på sparemålet. Hvis de trykker på en infoknapp vil de få opp alle oppgaver som er blitt registrert. Jeg ønsker også å prøve å få til en animasjon som startes i det brukeren trykker på kroneverdien, der en krone faller ned i grisen. Når sparemålet er nådd får de beskjed om det, og mulighet til å registrere et nytt sparemål.
