@@ -576,8 +576,8 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (72:3) {:else}
-    function create_else_block(ctx) {
+    // (82:3) {:else}
+    function create_else_block_1(ctx) {
     	let img;
     	let img_src_value;
     	let t0;
@@ -598,11 +598,11 @@ var app = (function () {
     			attr_dev(img, "id", "balloons");
     			if (img.src !== (img_src_value = "./assets/balloons.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "ballonger");
-    			attr_dev(img, "class", "svelte-1e2x1h0");
-    			add_location(img, file$2, 73, 4, 1887);
-    			add_location(p, file$2, 74, 4, 1955);
-    			attr_dev(button, "class", "svelte-1e2x1h0");
-    			add_location(button, file$2, 75, 4, 2002);
+    			attr_dev(img, "class", "svelte-1ant18e");
+    			add_location(img, file$2, 83, 4, 2156);
+    			add_location(p, file$2, 84, 4, 2224);
+    			attr_dev(button, "class", "svelte-1ant18e");
+    			add_location(button, file$2, 85, 4, 2271);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -625,16 +625,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block_1.name,
     		type: "else",
-    		source: "(72:3) {:else}",
+    		source: "(82:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:3) {#if !achieved}
+    // (70:3) {#if !achieved}
     function create_if_block_2(ctx) {
     	let h3;
     	let t1;
@@ -665,25 +665,25 @@ var app = (function () {
     			div2 = element("div");
     			t5 = space();
     			div3 = element("div");
-    			add_location(h3, file$2, 63, 4, 1351);
+    			add_location(h3, file$2, 71, 4, 1451);
     			attr_dev(input, "placeholder", "Arbeidsoppgave");
-    			attr_dev(input, "class", "svelte-1e2x1h0");
-    			add_location(input, file$2, 64, 4, 1398);
+    			attr_dev(input, "class", "svelte-1ant18e");
+    			add_location(input, file$2, 72, 4, 1498);
     			attr_dev(div0, "id", "ti");
-    			attr_dev(div0, "class", "knapper svelte-1e2x1h0");
-    			add_location(div0, file$2, 66, 5, 1486);
+    			attr_dev(div0, "class", "knapper svelte-1ant18e");
+    			add_location(div0, file$2, 74, 5, 1586);
     			attr_dev(div1, "id", "tyve");
-    			attr_dev(div1, "class", "knapper svelte-1e2x1h0");
-    			add_location(div1, file$2, 67, 5, 1574);
+    			attr_dev(div1, "class", "knapper svelte-1ant18e");
+    			add_location(div1, file$2, 75, 5, 1674);
     			attr_dev(div2, "id", "femti");
-    			attr_dev(div2, "class", "knapper svelte-1e2x1h0");
-    			add_location(div2, file$2, 68, 5, 1664);
+    			attr_dev(div2, "class", "knapper svelte-1ant18e");
+    			add_location(div2, file$2, 76, 5, 1764);
     			attr_dev(div3, "id", "hundre");
-    			attr_dev(div3, "class", "knapper svelte-1e2x1h0");
-    			add_location(div3, file$2, 69, 5, 1755);
+    			attr_dev(div3, "class", "knapper svelte-1ant18e");
+    			add_location(div3, file$2, 77, 5, 1855);
     			attr_dev(div4, "id", "verdiknapper");
-    			attr_dev(div4, "class", "svelte-1e2x1h0");
-    			add_location(div4, file$2, 65, 4, 1457);
+    			attr_dev(div4, "class", "svelte-1ant18e");
+    			add_location(div4, file$2, 73, 4, 1557);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -702,13 +702,13 @@ var app = (function () {
 
     			dispose = [
     				listen_dev(div0, "click", /*click_handler_1*/ ctx[15], false, false, false),
-    				listen_dev(div0, "click", /*addTask*/ ctx[10], false, false, false),
+    				listen_dev(div0, "click", /*addTask*/ ctx[11], false, false, false),
     				listen_dev(div1, "click", /*click_handler_2*/ ctx[16], false, false, false),
-    				listen_dev(div1, "click", /*addTask*/ ctx[10], false, false, false),
+    				listen_dev(div1, "click", /*addTask*/ ctx[11], false, false, false),
     				listen_dev(div2, "click", /*click_handler_3*/ ctx[17], false, false, false),
-    				listen_dev(div2, "click", /*addTask*/ ctx[10], false, false, false),
+    				listen_dev(div2, "click", /*addTask*/ ctx[11], false, false, false),
     				listen_dev(div3, "click", /*click_handler_4*/ ctx[18], false, false, false),
-    				listen_dev(div3, "click", /*addTask*/ ctx[10], false, false, false)
+    				listen_dev(div3, "click", /*addTask*/ ctx[11], false, false, false)
     			];
     		},
     		p: noop,
@@ -727,14 +727,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(62:3) {#if !achieved}",
+    		source: "(70:3) {#if !achieved}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:3) {#if !regGoal}
+    // (54:3) {#if !regGoal}
     function create_if_block_1(ctx) {
     	let h3;
     	let t1;
@@ -762,17 +762,17 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Neste";
-    			add_location(h3, file$2, 47, 3, 992);
+    			add_location(h3, file$2, 55, 3, 1092);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Sparemål");
-    			attr_dev(input0, "class", "svelte-1e2x1h0");
-    			add_location(input0, file$2, 48, 3, 1034);
+    			attr_dev(input0, "class", "svelte-1ant18e");
+    			add_location(input0, file$2, 56, 3, 1134);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "Kostnad");
-    			attr_dev(input1, "class", "svelte-1e2x1h0");
-    			add_location(input1, file$2, 54, 3, 1157);
-    			attr_dev(button, "class", "next svelte-1e2x1h0");
-    			add_location(button, file$2, 59, 3, 1234);
+    			attr_dev(input1, "class", "svelte-1ant18e");
+    			add_location(input1, file$2, 62, 3, 1257);
+    			attr_dev(button, "class", "next svelte-1ant18e");
+    			add_location(button, file$2, 67, 3, 1334);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -789,7 +789,7 @@ var app = (function () {
     				listen_dev(input0, "input", /*input0_input_handler*/ ctx[12]),
     				listen_dev(input0, "click", click_handler, false, false, false),
     				listen_dev(input1, "input", input1_input_handler),
-    				listen_dev(button, "click", /*startSaving*/ ctx[11], false, false, false)
+    				listen_dev(button, "click", /*startSaving*/ ctx[10], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -819,15 +819,15 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(46:3) {#if !regGoal}",
+    		source: "(54:3) {#if !regGoal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (99:2) {#if showTasklist}
-    function create_if_block(ctx) {
+    // (102:4) {:else}
+    function create_else_block(ctx) {
     	let div2;
     	let div0;
     	let t0;
@@ -865,14 +865,14 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "closeIcon svelte-1e2x1h0");
-    			add_location(div0, file$2, 100, 4, 2565);
-    			add_location(h40, file$2, 105, 5, 2702);
-    			add_location(h41, file$2, 106, 5, 2732);
-    			attr_dev(div1, "class", "taskList svelte-1e2x1h0");
-    			add_location(div1, file$2, 104, 4, 2674);
-    			attr_dev(div2, "class", "tasks svelte-1e2x1h0");
-    			add_location(div2, file$2, 99, 3, 2541);
+    			attr_dev(div0, "class", "closeIcon svelte-1ant18e");
+    			add_location(div0, file$2, 103, 5, 2692);
+    			add_location(h40, file$2, 108, 6, 2831);
+    			add_location(h41, file$2, 109, 6, 2862);
+    			attr_dev(div1, "class", "taskList svelte-1ant18e");
+    			add_location(div1, file$2, 107, 5, 2802);
+    			attr_dev(div2, "class", "tasks svelte-1ant18e");
+    			add_location(div2, file$2, 102, 4, 2667);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -936,16 +936,90 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
-    		type: "if",
-    		source: "(99:2) {#if showTasklist}",
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(102:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:5) {#each taskList as item}
+    // (93:4) {#if !showTasklist}
+    function create_if_block(ctx) {
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let div1;
+    	let t1;
+    	let t2;
+    	let div0;
+    	let current;
+    	let dispose;
+    	const infoicon = new InfoIcon({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			t0 = space();
+    			div1 = element("div");
+    			t1 = text(/*savings*/ ctx[2]);
+    			t2 = text(" kr\n\t\t\t\t\t");
+    			div0 = element("div");
+    			create_component(infoicon.$$.fragment);
+    			if (img.src !== (img_src_value = "./assets/piggybank.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "Sparegris");
+    			attr_dev(img, "class", "svelte-1ant18e");
+    			add_location(img, file$2, 93, 4, 2443);
+    			attr_dev(div0, "class", "infoIcon svelte-1ant18e");
+    			add_location(div0, file$2, 96, 5, 2543);
+    			attr_dev(div1, "class", "savings svelte-1ant18e");
+    			add_location(div1, file$2, 94, 4, 2498);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, t1);
+    			append_dev(div1, t2);
+    			append_dev(div1, div0);
+    			mount_component(infoicon, div0, null);
+    			current = true;
+    			dispose = listen_dev(div0, "click", /*click_handler_6*/ ctx[20], false, false, false);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (!current || dirty & /*savings*/ 4) set_data_dev(t1, /*savings*/ ctx[2]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(infoicon.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(infoicon.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(img);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div1);
+    			destroy_component(infoicon);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(93:4) {#if !showTasklist}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (111:6) {#each taskList as item}
     function create_each_block(ctx) {
     	let p0;
     	let t0_value = /*item*/ ctx[22].title + "";
@@ -964,8 +1038,8 @@ var app = (function () {
     			p1 = element("p");
     			t2 = text(t2_value);
     			t3 = text(" kr");
-    			add_location(p0, file$2, 108, 6, 2783);
-    			add_location(p1, file$2, 109, 6, 2809);
+    			add_location(p0, file$2, 111, 7, 2915);
+    			add_location(p1, file$2, 112, 7, 2942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -990,7 +1064,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(108:5) {#each taskList as item}",
+    		source: "(111:6) {#each taskList as item}",
     		ctx
     	});
 
@@ -999,160 +1073,133 @@ var app = (function () {
 
     function create_fragment$2(ctx) {
     	let main;
-    	let img0;
-    	let img0_src_value;
+    	let img;
+    	let img_src_value;
     	let t0;
     	let section;
     	let div0;
     	let t1;
-    	let div5;
     	let div3;
-    	let img1;
-    	let img1_src_value;
+    	let div1;
+    	let current_block_type_index;
+    	let if_block1;
     	let t2;
     	let div2;
-    	let div1;
-    	let t3;
-    	let t4;
-    	let t5;
-    	let t6;
-    	let div4;
     	let p0;
     	let label0;
     	let b0;
-    	let t8;
-    	let t9;
-    	let t10;
+    	let t4;
+    	let t5;
+    	let t6;
     	let p1;
     	let label1;
     	let b1;
-    	let t12;
-    	let t13;
-    	let t14;
-    	let t15;
+    	let t8;
+    	let t9;
+    	let t10;
     	let current;
-    	let dispose;
 
     	function select_block_type(ctx, dirty) {
     		if (!/*regGoal*/ ctx[3]) return create_if_block_1;
     		if (!/*achieved*/ ctx[9]) return create_if_block_2;
-    		return create_else_block;
+    		return create_else_block_1;
     	}
 
     	let current_block_type = select_block_type(ctx);
     	let if_block0 = current_block_type(ctx);
-    	const infoicon = new InfoIcon({ $$inline: true });
-    	let if_block1 = /*showTasklist*/ ctx[4] && create_if_block(ctx);
+    	const if_block_creators = [create_if_block, create_else_block];
+    	const if_blocks = [];
+
+    	function select_block_type_1(ctx, dirty) {
+    		if (!/*showTasklist*/ ctx[4]) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type_1(ctx);
+    	if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			img0 = element("img");
+    			img = element("img");
     			t0 = space();
     			section = element("section");
     			div0 = element("div");
     			if_block0.c();
     			t1 = space();
-    			div5 = element("div");
     			div3 = element("div");
-    			img1 = element("img");
+    			div1 = element("div");
+    			if_block1.c();
     			t2 = space();
     			div2 = element("div");
-    			div1 = element("div");
-    			create_component(infoicon.$$.fragment);
-    			t3 = space();
-    			t4 = text(/*savings*/ ctx[2]);
-    			t5 = text(" kr");
-    			t6 = space();
-    			div4 = element("div");
     			p0 = element("p");
     			label0 = element("label");
     			b0 = element("b");
     			b0.textContent = "Sparemål";
-    			t8 = space();
-    			t9 = text(/*goal*/ ctx[0]);
-    			t10 = space();
+    			t4 = space();
+    			t5 = text(/*goal*/ ctx[0]);
+    			t6 = space();
     			p1 = element("p");
     			label1 = element("label");
     			b1 = element("b");
     			b1.textContent = "Gjenstående beløp";
-    			t12 = space();
-    			t13 = text(/*diff*/ ctx[8]);
-    			t14 = text(" kr");
-    			t15 = space();
-    			if (if_block1) if_block1.c();
-    			attr_dev(img0, "id", "logo");
-    			if (img0.src !== (img0_src_value = "./assets/logo.png")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "alt", "logo");
-    			attr_dev(img0, "class", "svelte-1e2x1h0");
-    			add_location(img0, file$2, 41, 1, 848);
-    			attr_dev(div0, "class", "inputs svelte-1e2x1h0");
-    			add_location(div0, file$2, 44, 2, 931);
-    			if (img1.src !== (img1_src_value = "./assets/piggybank.png")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "alt", "Sparegris");
-    			attr_dev(img1, "class", "svelte-1e2x1h0");
-    			add_location(img1, file$2, 83, 4, 2149);
-    			attr_dev(div1, "class", "infoIcon svelte-1e2x1h0");
-    			add_location(div1, file$2, 85, 5, 2231);
-    			attr_dev(div2, "class", "savings svelte-1e2x1h0");
-    			add_location(div2, file$2, 84, 4, 2204);
-    			attr_dev(div3, "class", "pig svelte-1e2x1h0");
-    			add_location(div3, file$2, 82, 3, 2124);
-    			add_location(b0, file$2, 93, 14, 2399);
-    			add_location(label0, file$2, 93, 7, 2392);
-    			add_location(p0, file$2, 93, 4, 2389);
-    			add_location(b1, file$2, 94, 14, 2448);
-    			add_location(label1, file$2, 94, 7, 2441);
-    			add_location(p1, file$2, 94, 4, 2438);
-    			attr_dev(div4, "id", "goal");
-    			attr_dev(div4, "class", "svelte-1e2x1h0");
-    			add_location(div4, file$2, 92, 3, 2369);
-    			attr_dev(div5, "class", "piggybank svelte-1e2x1h0");
-    			add_location(div5, file$2, 81, 2, 2097);
-    			attr_dev(section, "class", "svelte-1e2x1h0");
-    			add_location(section, file$2, 43, 1, 919);
-    			attr_dev(main, "class", "svelte-1e2x1h0");
-    			add_location(main, file$2, 40, 0, 840);
+    			t8 = space();
+    			t9 = text(/*diff*/ ctx[8]);
+    			t10 = text(" kr");
+    			attr_dev(img, "id", "logo");
+    			if (img.src !== (img_src_value = "./assets/logo.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "logo");
+    			attr_dev(img, "class", "svelte-1ant18e");
+    			add_location(img, file$2, 49, 1, 948);
+    			attr_dev(div0, "class", "inputs svelte-1ant18e");
+    			add_location(div0, file$2, 52, 2, 1031);
+    			attr_dev(div1, "class", "pig svelte-1ant18e");
+    			add_location(div1, file$2, 91, 3, 2394);
+    			add_location(b0, file$2, 120, 14, 3055);
+    			add_location(label0, file$2, 120, 7, 3048);
+    			add_location(p0, file$2, 120, 4, 3045);
+    			add_location(b1, file$2, 121, 14, 3104);
+    			add_location(label1, file$2, 121, 7, 3097);
+    			add_location(p1, file$2, 121, 4, 3094);
+    			attr_dev(div2, "id", "goal");
+    			attr_dev(div2, "class", "svelte-1ant18e");
+    			add_location(div2, file$2, 119, 3, 3025);
+    			attr_dev(div3, "class", "piggybank svelte-1ant18e");
+    			add_location(div3, file$2, 90, 2, 2367);
+    			attr_dev(section, "class", "svelte-1ant18e");
+    			add_location(section, file$2, 51, 1, 1019);
+    			attr_dev(main, "class", "svelte-1ant18e");
+    			add_location(main, file$2, 48, 0, 940);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, img0);
+    			append_dev(main, img);
     			append_dev(main, t0);
     			append_dev(main, section);
     			append_dev(section, div0);
     			if_block0.m(div0, null);
     			append_dev(section, t1);
-    			append_dev(section, div5);
-    			append_dev(div5, div3);
-    			append_dev(div3, img1);
+    			append_dev(section, div3);
+    			append_dev(div3, div1);
+    			if_blocks[current_block_type_index].m(div1, null);
     			append_dev(div3, t2);
     			append_dev(div3, div2);
-    			append_dev(div2, div1);
-    			mount_component(infoicon, div1, null);
-    			append_dev(div2, t3);
-    			append_dev(div2, t4);
-    			append_dev(div2, t5);
-    			append_dev(div5, t6);
-    			append_dev(div5, div4);
-    			append_dev(div4, p0);
+    			append_dev(div2, p0);
     			append_dev(p0, label0);
     			append_dev(label0, b0);
-    			append_dev(p0, t8);
-    			append_dev(p0, t9);
-    			append_dev(div4, t10);
-    			append_dev(div4, p1);
+    			append_dev(p0, t4);
+    			append_dev(p0, t5);
+    			append_dev(div2, t6);
+    			append_dev(div2, p1);
     			append_dev(p1, label1);
     			append_dev(label1, b1);
-    			append_dev(p1, t12);
-    			append_dev(p1, t13);
-    			append_dev(p1, t14);
-    			append_dev(section, t15);
-    			if (if_block1) if_block1.m(section, null);
+    			append_dev(p1, t8);
+    			append_dev(p1, t9);
+    			append_dev(p1, t10);
     			current = true;
-    			dispose = listen_dev(div1, "click", /*click_handler_6*/ ctx[20], false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block0) {
@@ -1167,47 +1214,46 @@ var app = (function () {
     				}
     			}
 
-    			if (!current || dirty & /*savings*/ 4) set_data_dev(t4, /*savings*/ ctx[2]);
-    			if (!current || dirty & /*goal*/ 1) set_data_dev(t9, /*goal*/ ctx[0]);
-    			if (!current || dirty & /*diff*/ 256) set_data_dev(t13, /*diff*/ ctx[8]);
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type_1(ctx);
 
-    			if (/*showTasklist*/ ctx[4]) {
-    				if (if_block1) {
-    					if_block1.p(ctx, dirty);
-    					transition_in(if_block1, 1);
-    				} else {
-    					if_block1 = create_if_block(ctx);
-    					if_block1.c();
-    					transition_in(if_block1, 1);
-    					if_block1.m(section, null);
-    				}
-    			} else if (if_block1) {
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
     				group_outros();
 
-    				transition_out(if_block1, 1, 1, () => {
-    					if_block1 = null;
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
     				});
 
     				check_outros();
+    				if_block1 = if_blocks[current_block_type_index];
+
+    				if (!if_block1) {
+    					if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block1.c();
+    				}
+
+    				transition_in(if_block1, 1);
+    				if_block1.m(div1, null);
     			}
+
+    			if (!current || dirty & /*goal*/ 1) set_data_dev(t5, /*goal*/ ctx[0]);
+    			if (!current || dirty & /*diff*/ 256) set_data_dev(t9, /*diff*/ ctx[8]);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(infoicon.$$.fragment, local);
     			transition_in(if_block1);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(infoicon.$$.fragment, local);
     			transition_out(if_block1);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
     			if_block0.d();
-    			destroy_component(infoicon);
-    			if (if_block1) if_block1.d();
-    			dispose();
+    			if_blocks[current_block_type_index].d();
     		}
     	};
 
@@ -1234,6 +1280,11 @@ var app = (function () {
     	let task;
     	let taskPrice = 10;
 
+    	// let fillPiggybank = true
+    	const startSaving = () => {
+    		$$invalidate(3, regGoal = true);
+    	};
+
     	const addTask = () => {
     		if (task.value == "") {
     			$$invalidate(6, task.placeholder = "Du må fylle inn arbeidsoppgave", task);
@@ -1244,10 +1295,6 @@ var app = (function () {
     		$$invalidate(5, taskList = [{ title: task.value, cost: taskPrice }, ...taskList]);
     		$$invalidate(6, task.value = "", task);
     		$$invalidate(7, taskPrice = 10);
-    	};
-
-    	const startSaving = () => {
-    		$$invalidate(3, regGoal = true);
     	};
 
     	function input0_input_handler() {
@@ -1288,8 +1335,8 @@ var app = (function () {
     		taskList,
     		task,
     		taskPrice,
-    		addTask,
     		startSaving,
+    		addTask,
     		diff,
     		achieved,
     		console
@@ -1340,8 +1387,8 @@ var app = (function () {
     		taskPrice,
     		diff,
     		achieved,
-    		addTask,
     		startSaving,
+    		addTask,
     		input0_input_handler,
     		input1_input_handler,
     		input_binding,

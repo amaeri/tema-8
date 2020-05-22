@@ -12,10 +12,17 @@
 	$: console.log(taskList)
 
 	let regGoal = true //bytt til false for å restarte
+
 	let showTasklist = false
 	let taskList = []
 	let task
 	let taskPrice = 10
+
+	// let fillPiggybank = true
+		
+	const startSaving = () => {
+		regGoal = true
+	}
 
 	const addTask = () => {
 		if (task.value == '') {
@@ -31,9 +38,10 @@
 		taskPrice = 10
 	}
 
-	const startSaving = () => {
-		regGoal = true
-	}
+	// const piggyFilled = () => {
+	// 	fillPiggybank = false
+	// }
+
 </script>
 
 
@@ -68,6 +76,8 @@
 					<div id="tyve" class="knapper" on:click={()=>taskPrice=20} on:click={addTask}></div>
 					<div id="femti" class="knapper" on:click={()=>taskPrice=50} on:click={addTask}></div>
 					<div id="hundre" class="knapper" on:click={()=>taskPrice=100} on:click={addTask}></div>
+<!-- Animasjon -->
+					<!-- <div on:animationstart={addTask} on:animationend={piggyFilled} class="animation"><img src="./assets/krone.png" alt="kronestykke"></div> -->
 				</div>
 			{:else}
 <!-- Fullført -->
@@ -76,43 +86,44 @@
 				<button on:click={ () => regGoal = false}>Nytt sparemål</button>
 			{/if}
 		{/if}
-
 		</div>
-
+		
 		<div class="piggybank">
 			<div class='pig'>			
+				{#if !showTasklist}
 				<img src="./assets/piggybank.png" alt="Sparegris">
 				<div class="savings">
+					{savings} kr
 					<div class="infoIcon"
-					on:click={ () => showTasklist = true }>
+					on:click={ () => showTasklist = true}> 
 					<InfoIcon />
 					</div>
-				{savings} kr
 				</div>
+				{:else}
+				<div class="tasks">
+					<div class="closeIcon"
+					on:click={ () => showTasklist = false}>
+					<CloseCircleIcon />
+					</div>
+					<div class="taskList">
+						<h4>Arbeidsoppgaver</h4>
+						<h4>Beløp</h4>
+						{#each taskList as item}
+							<p>{item.title}</p>
+							<p>{item.cost} kr</p>
+						{/each}
+					</div>
+				</div>
+				{/if}
 			</div>
+
 			<div id="goal">
 				<p><label><b>Sparemål</b></label> {goal}</p>
 				<p><label><b>Gjenstående beløp</b></label> {diff} kr</p>
-			</div>
+			</div>	
 		</div>
-		
-		{#if showTasklist}
-			<div class="tasks">
-				<div class="closeIcon"
-					on:click={ () => showTasklist = false }>
-					<CloseCircleIcon />
-				</div>
-				<div class="taskList">
-					<h4>Arbeidsoppgaver</h4>
-					<h4>Beløp</h4>
-					{#each taskList as item}
-						<p>{item.title}</p>
-						<p>{item.cost} kr</p>
-					{/each}
-				</div>
-			</div>
-		{/if}
 
+		
 	</section>
 </main>
 
@@ -193,40 +204,61 @@
 
 	.savings{
 		display: grid;
+		grid-template-columns: 2fr 1fr;
 		place-items: center;
 		position:absolute;
 		background-color: white;
 		border: 2px solid black;
 		border-radius: 20px;
-		padding: 1rem 2rem 1rem 2rem;
+		padding: .5rem .5rem .5rem 1rem;
 		right: 7rem;
-		font-size: 1.5rem;
+		font-size: 2vw;
 	}
 
 	.infoIcon {
-		max-width: 2rem;
+		max-width: 1.5rem;
 		cursor: pointer;
+		margin-bottom: 3rem;
 	}
 
 	.tasks {
 		display: grid;
-		position: absolute;
+		grid-template-rows: 1fr 10fr;
 		background-color: white;
 		border: 2px solid black;
 		border-radius: 20px;
 		padding: 1rem;
-		right: 10rem;
 	}
 
 	.closeIcon {
-		max-width: 2rem;
+		max-width: 1.5rem;
 		cursor: pointer;
+		margin-left: 20rem;
 	}
 
 	.taskList {
 		display: grid;
-		place-items: center;
 		grid-template-columns: 1fr 1fr;
+		text-align: center;
+	}
+
+	/* .animation img {
+		background-size: cover;
+		width: 3vw;
+	}
+
+	.animation {
+		position: absolute;
+		top: 0;
+		right: 17rem;
+		animation: coinFalling 1s linear forwards;
+		z-index: 1;
+	} */
+
+	@keyframes coinFalling {
+		to {
+			transform: translateY(250px);
+		}
 	}
 
 	#goal {
@@ -244,15 +276,15 @@
 	#verdiknapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap: 2rem;
 		padding-top: 1rem;
-		cursor: pointer;	
+		gap: 2.4vw;
+		cursor: pointer;
 	}
 
 	.knapper {
-		width: 60px;
-    	height: 60px;
-    	background-size: cover;
+		width: 4.5vw;
+    	height: 4.5vw; /* hvorfor blir det rart med vh? */
+     	background-size: cover;
 	}
 
 	#ti {
@@ -274,6 +306,11 @@
 	/* Fullført sparing */
 	#balloons {
 		width: 10vw;
+	}
+
+	@media (max-width:700px) {
+
+
 	}
 
 </style>
