@@ -54,6 +54,7 @@
 		goal = ''
 		cost = ''
 		savings = 0
+		taskList = []
 	}
 
 </script>
@@ -111,8 +112,8 @@
 					<CloseCircleIcon />
 					</div>
 					<div class="taskList">
-						<label><b>Arbeidsoppgaver</b></label>
-						<label><b>Beløp</b></label>
+						<label><strong>Arbeidsoppgaver</strong></label>
+						<label><strong>Beløp</strong></label>
 						{#each taskList as item}
 							<li>{item.title}</li>
 							<li>{item.cost} kr</li>
@@ -123,8 +124,8 @@
 			</div>
 
 			<div id="goal">
-				<p><label><b>Sparemål</b></label> {goal} </p>
-				<p><label><b>Restbeløp</b></label> {diff} kr</p>
+				<p><label><strong>Sparemål</strong></label> {goal} </p>
+				<p><label><strong>Restbeløp</strong></label> {diff} kr</p>
 			</div>	
 		</div>
 </main>
@@ -192,6 +193,7 @@
 		border: 1px solid white;
 		color: #8AB8EF;
 		cursor: pointer;
+		margin-top: 1rem;
 	}
 
 	button:hover {
@@ -346,6 +348,11 @@
 
 		input {
 			width: 70vw;
+		}
+
+		/* INPUT BUTTONS */
+		button {
+			margin-top: 0;
 		}
 
 		/* PIGGYBANK */
