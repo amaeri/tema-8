@@ -1,8 +1,8 @@
 {
   "name": "svelte-electron-forge",
-  "productName": "svelte-electron-forge",
+  "productName": "Sparegrisen",
   "version": "1.0.0",
-  "description": "Svelte + Electron Forge",
+  "description": "A kids chores app that will teach them to help out more at home as well as learning the value of money",
   "main": "src/index.js",
   "scripts": {
     "start": "concurrently \"npm:svelte-dev\" \"electron-forge start\"",
