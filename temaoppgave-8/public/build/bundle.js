@@ -598,10 +598,10 @@ var app = (function () {
     			attr_dev(img, "id", "balloons");
     			if (img.src !== (img_src_value = "./assets/balloons.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "ballonger");
-    			attr_dev(img, "class", "svelte-18g0lv3");
+    			attr_dev(img, "class", "svelte-11se998");
     			add_location(img, file$2, 89, 4, 2384);
     			add_location(p, file$2, 90, 4, 2452);
-    			attr_dev(button, "class", "svelte-18g0lv3");
+    			attr_dev(button, "class", "svelte-11se998");
     			add_location(button, file$2, 91, 4, 2499);
     		},
     		m: function mount(target, anchor) {
@@ -671,26 +671,26 @@ var app = (function () {
     			img3 = element("img");
     			add_location(p, file$2, 77, 4, 1728);
     			attr_dev(input, "placeholder", "Arbeidsoppgave");
-    			attr_dev(input, "class", "svelte-18g0lv3");
+    			attr_dev(input, "class", "svelte-11se998");
     			add_location(input, file$2, 78, 4, 1773);
     			if (img0.src !== (img0_src_value = "./assets/ti.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "ti");
-    			attr_dev(img0, "class", "svelte-18g0lv3");
+    			attr_dev(img0, "class", "svelte-11se998");
     			add_location(img0, file$2, 80, 5, 1862);
     			if (img1.src !== (img1_src_value = "./assets/tyve.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "tyve");
-    			attr_dev(img1, "class", "svelte-18g0lv3");
+    			attr_dev(img1, "class", "svelte-11se998");
     			add_location(img1, file$2, 81, 5, 1951);
     			if (img2.src !== (img2_src_value = "./assets/femti.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "femti");
-    			attr_dev(img2, "class", "svelte-18g0lv3");
+    			attr_dev(img2, "class", "svelte-11se998");
     			add_location(img2, file$2, 82, 5, 2044);
     			if (img3.src !== (img3_src_value = "./assets/hundre.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "hundre");
-    			attr_dev(img3, "class", "svelte-18g0lv3");
+    			attr_dev(img3, "class", "svelte-11se998");
     			add_location(img3, file$2, 83, 5, 2139);
     			attr_dev(div, "id", "amountbuttons");
-    			attr_dev(div, "class", "svelte-18g0lv3");
+    			attr_dev(div, "class", "svelte-11se998");
     			add_location(div, file$2, 79, 4, 1832);
     		},
     		m: function mount(target, anchor) {
@@ -772,13 +772,13 @@ var app = (function () {
     			button.textContent = "Neste";
     			add_location(p, file$2, 68, 3, 1362);
     			attr_dev(input0, "placeholder", "Sparemål");
-    			attr_dev(input0, "class", "svelte-18g0lv3");
+    			attr_dev(input0, "class", "svelte-11se998");
     			add_location(input0, file$2, 69, 3, 1402);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "Kostnad");
-    			attr_dev(input1, "class", "svelte-18g0lv3");
+    			attr_dev(input1, "class", "svelte-11se998");
     			add_location(input1, file$2, 71, 3, 1522);
-    			attr_dev(button, "class", "next svelte-18g0lv3");
+    			attr_dev(button, "class", "next svelte-11se998");
     			add_location(button, file$2, 73, 3, 1611);
     		},
     		m: function mount(target, anchor) {
@@ -880,15 +880,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "closeIcon svelte-18g0lv3");
+    			attr_dev(div0, "class", "closeIcon svelte-11se998");
     			add_location(div0, file$2, 109, 5, 2912);
     			add_location(strong0, file$2, 114, 13, 3058);
     			add_location(label0, file$2, 114, 6, 3051);
     			add_location(strong1, file$2, 115, 13, 3112);
     			add_location(label1, file$2, 115, 6, 3105);
-    			attr_dev(div1, "class", "taskList svelte-18g0lv3");
+    			attr_dev(div1, "class", "taskList svelte-11se998");
     			add_location(div1, file$2, 113, 5, 3022);
-    			attr_dev(div2, "class", "tasks svelte-18g0lv3");
+    			attr_dev(div2, "class", "tasks svelte-11se998");
     			add_location(div2, file$2, 108, 4, 2887);
     		},
     		m: function mount(target, anchor) {
@@ -988,11 +988,11 @@ var app = (function () {
     			create_component(infoicon.$$.fragment);
     			if (img.src !== (img_src_value = "./assets/piggybank.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Sparegris");
-    			attr_dev(img, "class", "svelte-18g0lv3");
+    			attr_dev(img, "class", "svelte-11se998");
     			add_location(img, file$2, 99, 4, 2663);
-    			attr_dev(div0, "class", "infoIcon svelte-18g0lv3");
+    			attr_dev(div0, "class", "infoIcon svelte-11se998");
     			add_location(div0, file$2, 102, 5, 2763);
-    			attr_dev(div1, "class", "savings svelte-18g0lv3");
+    			attr_dev(div1, "class", "savings svelte-11se998");
     			add_location(div1, file$2, 100, 4, 2718);
     		},
     		m: function mount(target, anchor) {
@@ -1168,14 +1168,14 @@ var app = (function () {
     			attr_dev(img, "id", "logo");
     			if (img.src !== (img_src_value = "./assets/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			attr_dev(img, "class", "svelte-18g0lv3");
+    			attr_dev(img, "class", "svelte-11se998");
     			add_location(img, file$2, 61, 8, 1217);
-    			attr_dev(header, "class", "svelte-18g0lv3");
+    			attr_dev(header, "class", "svelte-11se998");
     			add_location(header, file$2, 61, 0, 1209);
     			attr_dev(div0, "id", "inputs");
-    			attr_dev(div0, "class", "svelte-18g0lv3");
+    			attr_dev(div0, "class", "svelte-11se998");
     			add_location(div0, file$2, 65, 2, 1305);
-    			attr_dev(div1, "class", "pig svelte-18g0lv3");
+    			attr_dev(div1, "class", "pig svelte-11se998");
     			add_location(div1, file$2, 97, 3, 2614);
     			add_location(strong0, file$2, 126, 14, 3325);
     			add_location(label0, file$2, 126, 7, 3318);
@@ -1184,11 +1184,11 @@ var app = (function () {
     			add_location(label1, file$2, 127, 7, 3378);
     			add_location(p1, file$2, 127, 4, 3375);
     			attr_dev(div2, "id", "goal");
-    			attr_dev(div2, "class", "svelte-18g0lv3");
+    			attr_dev(div2, "class", "svelte-11se998");
     			add_location(div2, file$2, 125, 3, 3295);
-    			attr_dev(div3, "class", "piggybank svelte-18g0lv3");
+    			attr_dev(div3, "class", "piggybank svelte-11se998");
     			add_location(div3, file$2, 96, 2, 2587);
-    			attr_dev(main, "class", "svelte-18g0lv3");
+    			attr_dev(main, "class", "svelte-11se998");
     			add_location(main, file$2, 63, 0, 1278);
     		},
     		l: function claim(nodes) {

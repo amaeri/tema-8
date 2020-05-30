@@ -252,7 +252,7 @@
 		border: 2px solid black;
 		border-radius: 1rem;
 		padding: 0 .5rem .5rem 1rem;
-		font-size: 2vw;
+		font-size: 2.5vw;
 		right: 11vw;
 	}
 
