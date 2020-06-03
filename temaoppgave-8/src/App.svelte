@@ -2,24 +2,24 @@
 	import {InfoIcon} from 'svelte-eva-icons'
 	import {CloseCircleIcon} from 'svelte-eva-icons'
 
-	let goal = 'Lego' //tøm for å restarte
+	let goal = '' 
 	let savinggoal
-	let cost = '200' //bytt til 0 for å restarte
+	let cost = ''
 	let savingcost
-	let savings = 0
 
-	$: diff = cost - savings
-	$: achieved = diff <= 0 ? true : false
-	$: console.log(taskList)
-
-	let regGoal = true //bytt til false for å restarte
+	let regGoal = false 
 
 	let showTasklist = false
 	let taskList = []
 	let task
 	let taskPrice = 10
+	let savings = 0
 
-	let animationOn = false
+	let showAnimation = false
+
+	$: diff = cost - savings
+	$: achieved = diff <= 0 ? true : false
+	$: console.log(taskList)
 		
 	const startSaving = () => {
 		if (savinggoal.value == '' && savingcost.value == 0) {
@@ -31,21 +31,21 @@
 	}
 
 	const addTask = () => {
-		if (task.value == '' && animationOn) {
+		if (task.value == '') {
 			task.placeholder = 'Du må fylle inn arbeidsoppgave'
 			return
 		}
-		animationOn = true
-		task.value = ''
-	}
-
-	const fillPiggybank = () => {
-		animationOn = false
-		savings = savings + taskPrice
+		showAnimation = true
 		taskList = [{
 			title: task.value,
 			cost: taskPrice
 		}, ...taskList]
+		task.value = ''
+	}
+
+	const fillPiggybank = () => {
+		showAnimation = false
+		savings = savings + taskPrice
 		taskPrice = 10
 	}
 
@@ -69,22 +69,22 @@
 			<p>Registrer sparemål og kostnad</p>
 			<input bind:this={savinggoal} bind:value={goal} placeholder='Sparemål' on:click={ event => event.target.value= ''}>
 
-			<input type="number" bind:this={savingcost} bind:value={cost} placeholder="Kostnad">
+			<input type="number" bind:this={savingcost} bind:value={cost} placeholder="Kostnad" on:keydown={ event => event.key == 'Enter' ? startSaving() : ''} >
 
-			<button class="next" on:click={startSaving} on:keydown={e => e.key === 'Enter' && startSaving}>Neste</button>
+			<button class="next" on:click={startSaving}>Neste</button>
 		{:else}
 			{#if !achieved}
 <!-- Arbeidsoppgaver -->
 				<p>Registrer arbeidsoppgave og beløp</p>
 				<input bind:this={task} placeholder='Arbeidsoppgave'/>
-				<div id="amountbuttons" >
-					<img src="./assets/ti.png" alt="ti" on:click={()=>taskPrice=10} on:click={addTask}>
-					<img src="./assets/tyve.png" alt="tyve" on:click={()=>taskPrice=20} on:click={addTask}>
-					<img src="./assets/femti.png" alt="femti" on:click={()=>taskPrice=50} on:click={addTask}>
-					<img src="./assets/hundre.png" alt="hundre" on:click={()=>taskPrice=100} on:click={addTask}>
+				<div id="coinbuttons" >
+					<img class="coins" src="./assets/ti.png" alt="ti" on:click={()=>taskPrice=10} on:click={addTask}>
+					<img class="coins" src="./assets/tyve.png" alt="tyve" on:click={()=>taskPrice=20} on:click={addTask}>
+					<img class="coins" src="./assets/femti.png" alt="femti" on:click={()=>taskPrice=50} on:click={addTask}>
+					<img class="coins" src="./assets/hundre.png" alt="hundre" on:click={()=>taskPrice=100} on:click={addTask}>
 
-<!-- Animasjon -->	{#if animationOn}
-					<div on:animationend={fillPiggybank} id="animation"><img src="./assets/krone.png" alt="kronestykke"></div>
+<!-- Animasjon -->	{#if showAnimation}
+						<div on:animationend={fillPiggybank} id="animation"><img src="./assets/krone.png" alt="kronestykke"></div>
 					{/if}
 				</div>
 			{:else}
@@ -101,21 +101,19 @@
 				{#if !showTasklist}
 				<img src="./assets/piggybank.png" alt="Sparegris">
 				<div class="savings">
-					{savings} kr
-					<div class="infoIcon"
-					on:click={ () => showTasklist = true}> 
-					<InfoIcon />
+					<div class="infoIcon" on:click={ () => showTasklist = true}> 
+						<InfoIcon />
 					</div>
+					<p id="savingamount">{savings} kr</p>
 				</div>
 				{:else}
 				<div class="tasks">
-					<div class="closeIcon"
-					on:click={ () => showTasklist = false}>
+					<div class="closeIcon" on:click={ () => showTasklist = false}>
 					<CloseCircleIcon />
 					</div>
 					<div class="taskList">
-						<label><strong>Arbeidsoppgaver</strong></label>
-						<label><strong>Beløp</strong></label>
+						<label>Arbeidsoppgaver</label>
+						<label>Beløp</label>
 						{#each taskList as item}
 							<li>{item.title}</li>
 							<li>{item.cost} kr</li>
@@ -126,14 +124,14 @@
 			</div>
 
 			<div id="goal">
-				<p><label><strong>Sparemål</strong></label> {goal} </p>
-				<p><label><strong>Restbeløp</strong></label> {diff} kr</p>
+				<p><label>Sparemål</label> {goal} </p>
+				<p><label>Restbeløp</label> {diff} kr</p>
 			</div>	
 		</div>
 </main>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');	
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');	
 
 	:global(body) {
 		margin: 0;
@@ -167,6 +165,10 @@
 		padding-top: 10vh;
 	}
 
+	label {
+		font-weight: 600;
+	}
+
 
 	/* INPUTS */
 	#inputs {
@@ -192,10 +194,11 @@
 		place-items: center;
 		border-radius: 50px;
 		background-color: #D1E6FE;
-		border: 1px solid white;
 		color: #8AB8EF;
 		cursor: pointer;
 		margin-top: 1rem;
+		border: none;
+
 	}
 
 	button:hover {
@@ -203,7 +206,7 @@
 		color: #8AB8EF;
 	}
 
-	#amountbuttons {
+	#coinbuttons {
 		display: grid;
 		grid-auto-flow: column;
 		width: 35vw;
@@ -212,12 +215,14 @@
 		margin-top: 1rem;
 	}
 
-	#amountbuttons img {
+	.coins {
 		width: 4rem;
      	background-size: cover;
-		z-index: 1;
 	}
 
+	.coins:hover {
+		transform: scale(1.2);
+	}
 
 	/* ANIMATION */
 	#animation img {
@@ -229,7 +234,7 @@
 		top: -10vh;
 		right: 18vw;
 		animation-name: fillPiggybank;
-		animation-duration: 1s;
+		animation-duration: 1.2s;
 		animation-timing-function: linear;
 		z-index: 1;
 	}
@@ -270,15 +275,19 @@
 	/* SAVINGS (PIGGYSCREEN) */
 	.savings{
 		display: grid;
+		grid-template-rows: .5fr 1fr;
 		position:absolute;
-		grid-template-columns: 2fr 1fr;
 		place-items: center;
 		background-color: white;
 		border: 2px solid black;
 		border-radius: 1rem;
-		padding: 0 .5rem .5rem 1rem;
-		font-size: 2.5vw;
-		right: 11vw;
+		padding: .2rem;
+		right: 12vw;
+	}
+
+	#savingamount {
+		margin: 0;
+		font-size: 3vw;
 	}
 
 	.tasks {
@@ -286,7 +295,7 @@
 		justify-content: space-between;
 		background-color: white;
 		border: 2px solid black;
-		border-radius: 20px;
+		border-radius: 1rem;
 		padding: 1rem;
 	}
 
@@ -294,6 +303,29 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		list-style-type: none;
+	}
+
+	/* PIGGYBANK BUTTONS */
+	.infoIcon {
+		width: 1.5rem;
+		margin-left: 3.5rem;
+		cursor: pointer;
+		fill: #87ce90;
+	}
+
+	.infoIcon:hover {
+		transform: scale(1.2);
+	}
+
+	.closeIcon {
+		width: 1.5rem;
+		cursor: pointer;
+		margin-left: 20rem;
+		fill: #87ce90;
+	}
+
+	.closeIcon:hover {
+		transform: scale(1.2);
 	}
 
 	/* GOAL */
@@ -309,19 +341,6 @@
 		width: 48vw;
 		border-radius: 1vw 20vw 1vw 20vw;
 		bottom: 0;
-	}
-
-	/* PIGGYBANK BUTTONS */
-	.infoIcon {
-		max-width: 1.5rem;
-		cursor: pointer;
-		margin-bottom: 5vh;
-	}
-
-	.closeIcon {
-		max-width: 1.5rem;
-		cursor: pointer;
-		margin-left: 20rem;
 	}
 
 
@@ -361,6 +380,10 @@
 			margin-top: 0;
 		}
 
+		.coins:hover {
+		transform: none;
+	}
+
 		/* PIGGYBANK */
 
 		.piggybank {
@@ -375,9 +398,12 @@
 
 		/* SAVINGS (PIGGYSCREEN) */
 		.savings {
-			right: 24vw;
-			font-size: 1.5rem;
+			right: 25vw;
 		}
+
+		#savingamount {
+		font-size: 6vw;
+	}
 
 		/* GOAL */
 
@@ -389,19 +415,20 @@
 
 
 		/* ANIMATION */
-		/* #animation img {
-			width: 8vw;
+		#animation img {
+			width: 6vw;
 		}
 
 		#animation {
-			top: 42vh;
-			right: 9.2rem;
+			top: 45vh;
+			right: 39vw;
+			animation-duration: .5s;
 		}
 
-		@keyframes coinFalling {
-		to {
-			transform: translateY(93px);
+		@keyframes fillPiggybank {
+			to {
+				transform: translateY(55px) rotate(.5turn);
 			}
-		} */
+		}
 	}
 </style>

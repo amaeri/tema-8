@@ -552,11 +552,11 @@ var app = (function () {
     			attr_dev(img, "id", "balloons");
     			if (img.src !== (img_src_value = "./assets/balloons.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "ballonger");
-    			attr_dev(img, "class", "svelte-pnqck6");
-    			add_location(img, file$2, 91, 4, 2468);
-    			add_location(p, file$2, 92, 4, 2536);
-    			attr_dev(button, "class", "svelte-pnqck6");
-    			add_location(button, file$2, 93, 4, 2583);
+    			attr_dev(img, "class", "svelte-164ydgy");
+    			add_location(img, file$2, 91, 4, 2446);
+    			add_location(p, file$2, 92, 4, 2514);
+    			attr_dev(button, "class", "svelte-164ydgy");
+    			add_location(button, file$2, 93, 4, 2561);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -608,7 +608,7 @@ var app = (function () {
     	let img3_src_value;
     	let t6;
     	let dispose;
-    	let if_block = /*animationOn*/ ctx[10] && create_if_block_3(ctx);
+    	let if_block = /*showAnimation*/ ctx[10] && create_if_block_3(ctx);
 
     	const block = {
     		c: function create() {
@@ -627,29 +627,29 @@ var app = (function () {
     			img3 = element("img");
     			t6 = space();
     			if (if_block) if_block.c();
-    			add_location(p, file$2, 77, 4, 1758);
+    			add_location(p, file$2, 77, 4, 1679);
     			attr_dev(input, "placeholder", "Arbeidsoppgave");
-    			attr_dev(input, "class", "svelte-pnqck6");
-    			add_location(input, file$2, 78, 4, 1803);
+    			attr_dev(input, "class", "svelte-164ydgy");
+    			add_location(input, file$2, 78, 4, 1724);
+    			attr_dev(img0, "class", "coins svelte-164ydgy");
     			if (img0.src !== (img0_src_value = "./assets/ti.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "ti");
-    			attr_dev(img0, "class", "svelte-pnqck6");
-    			add_location(img0, file$2, 80, 5, 1893);
+    			add_location(img0, file$2, 80, 5, 1812);
+    			attr_dev(img1, "class", "coins svelte-164ydgy");
     			if (img1.src !== (img1_src_value = "./assets/tyve.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "tyve");
-    			attr_dev(img1, "class", "svelte-pnqck6");
-    			add_location(img1, file$2, 81, 5, 1982);
+    			add_location(img1, file$2, 81, 5, 1915);
+    			attr_dev(img2, "class", "coins svelte-164ydgy");
     			if (img2.src !== (img2_src_value = "./assets/femti.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "femti");
-    			attr_dev(img2, "class", "svelte-pnqck6");
-    			add_location(img2, file$2, 82, 5, 2075);
+    			add_location(img2, file$2, 82, 5, 2022);
+    			attr_dev(img3, "class", "coins svelte-164ydgy");
     			if (img3.src !== (img3_src_value = "./assets/hundre.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "hundre");
-    			attr_dev(img3, "class", "svelte-pnqck6");
-    			add_location(img3, file$2, 83, 5, 2170);
-    			attr_dev(div, "id", "amountbuttons");
-    			attr_dev(div, "class", "svelte-pnqck6");
-    			add_location(div, file$2, 79, 4, 1862);
+    			add_location(img3, file$2, 83, 5, 2131);
+    			attr_dev(div, "id", "coinbuttons");
+    			attr_dev(div, "class", "svelte-164ydgy");
+    			add_location(div, file$2, 79, 4, 1783);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -680,7 +680,7 @@ var app = (function () {
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (/*animationOn*/ ctx[10]) {
+    			if (/*showAnimation*/ ctx[10]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -744,16 +744,16 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Neste";
-    			add_location(p, file$2, 68, 3, 1341);
+    			add_location(p, file$2, 68, 3, 1247);
     			attr_dev(input0, "placeholder", "Sparemål");
-    			attr_dev(input0, "class", "svelte-pnqck6");
-    			add_location(input0, file$2, 69, 3, 1381);
+    			attr_dev(input0, "class", "svelte-164ydgy");
+    			add_location(input0, file$2, 69, 3, 1287);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "Kostnad");
-    			attr_dev(input1, "class", "svelte-pnqck6");
-    			add_location(input1, file$2, 71, 3, 1501);
-    			attr_dev(button, "class", "next svelte-pnqck6");
-    			add_location(button, file$2, 73, 3, 1590);
+    			attr_dev(input1, "class", "svelte-164ydgy");
+    			add_location(input1, file$2, 71, 3, 1407);
+    			attr_dev(button, "class", "next svelte-164ydgy");
+    			add_location(button, file$2, 73, 3, 1562);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -772,8 +772,8 @@ var app = (function () {
     				listen_dev(input0, "input", /*input0_input_handler*/ ctx[18]),
     				listen_dev(input0, "click", click_handler, false, false, false),
     				listen_dev(input1, "input", input1_input_handler),
-    				listen_dev(button, "click", /*startSaving*/ ctx[13], false, false, false),
-    				listen_dev(button, "keydown", /*keydown_handler*/ ctx[21], false, false, false)
+    				listen_dev(input1, "keydown", /*keydown_handler*/ ctx[21], false, false, false),
+    				listen_dev(button, "click", /*startSaving*/ ctx[13], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -812,7 +812,7 @@ var app = (function () {
     	return block;
     }
 
-    // (86:19) {#if animationOn}
+    // (86:19) {#if showAnimation}
     function create_if_block_3(ctx) {
     	let div;
     	let img;
@@ -825,11 +825,11 @@ var app = (function () {
     			img = element("img");
     			if (img.src !== (img_src_value = "./assets/krone.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "kronestykke");
-    			attr_dev(img, "class", "svelte-pnqck6");
-    			add_location(img, file$2, 86, 57, 2358);
+    			attr_dev(img, "class", "svelte-164ydgy");
+    			add_location(img, file$2, 86, 58, 2336);
     			attr_dev(div, "id", "animation");
-    			attr_dev(div, "class", "svelte-pnqck6");
-    			add_location(div, file$2, 86, 5, 2306);
+    			attr_dev(div, "class", "svelte-164ydgy");
+    			add_location(div, file$2, 86, 6, 2284);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -847,29 +847,27 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(86:19) {#if animationOn}",
+    		source: "(86:19) {#if showAnimation}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:4) {:else}
+    // (109:4) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let div0;
     	let t0;
     	let div1;
     	let label0;
-    	let strong0;
     	let t2;
     	let label1;
-    	let strong1;
     	let t4;
     	let current;
     	let dispose;
     	const closecircleicon = new CloseCircleIcon({ $$inline: true });
-    	let each_value = /*taskList*/ ctx[7];
+    	let each_value = /*taskList*/ ctx[6];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -885,28 +883,26 @@ var app = (function () {
     			t0 = space();
     			div1 = element("div");
     			label0 = element("label");
-    			strong0 = element("strong");
-    			strong0.textContent = "Arbeidsoppgaver";
+    			label0.textContent = "Arbeidsoppgaver";
     			t2 = space();
     			label1 = element("label");
-    			strong1 = element("strong");
-    			strong1.textContent = "Beløp";
+    			label1.textContent = "Beløp";
     			t4 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "closeIcon svelte-pnqck6");
-    			add_location(div0, file$2, 111, 5, 2996);
-    			add_location(strong0, file$2, 116, 13, 3142);
-    			add_location(label0, file$2, 116, 6, 3135);
-    			add_location(strong1, file$2, 117, 13, 3196);
-    			add_location(label1, file$2, 117, 6, 3189);
-    			attr_dev(div1, "class", "taskList svelte-pnqck6");
-    			add_location(div1, file$2, 115, 5, 3106);
-    			attr_dev(div2, "class", "tasks svelte-pnqck6");
-    			add_location(div2, file$2, 110, 4, 2971);
+    			attr_dev(div0, "class", "closeIcon svelte-164ydgy");
+    			add_location(div0, file$2, 110, 5, 2995);
+    			attr_dev(label0, "class", "svelte-164ydgy");
+    			add_location(label0, file$2, 114, 6, 3129);
+    			attr_dev(label1, "class", "svelte-164ydgy");
+    			add_location(label1, file$2, 115, 6, 3166);
+    			attr_dev(div1, "class", "taskList svelte-164ydgy");
+    			add_location(div1, file$2, 113, 5, 3100);
+    			attr_dev(div2, "class", "tasks svelte-164ydgy");
+    			add_location(div2, file$2, 109, 4, 2970);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -915,10 +911,8 @@ var app = (function () {
     			append_dev(div2, t0);
     			append_dev(div2, div1);
     			append_dev(div1, label0);
-    			append_dev(label0, strong0);
     			append_dev(div1, t2);
     			append_dev(div1, label1);
-    			append_dev(label1, strong1);
     			append_dev(div1, t4);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -929,8 +923,8 @@ var app = (function () {
     			dispose = listen_dev(div0, "click", /*click_handler_7*/ ctx[29], false, false, false);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*taskList*/ 128) {
-    				each_value = /*taskList*/ ctx[7];
+    			if (dirty[0] & /*taskList*/ 64) {
+    				each_value = /*taskList*/ ctx[6];
     				validate_each_argument(each_value);
     				let i;
 
@@ -974,7 +968,7 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(110:4) {:else}",
+    		source: "(109:4) {:else}",
     		ctx
     	});
 
@@ -987,9 +981,11 @@ var app = (function () {
     	let img_src_value;
     	let t0;
     	let div1;
-    	let t1;
-    	let t2;
     	let div0;
+    	let t1;
+    	let p;
+    	let t2;
+    	let t3;
     	let current;
     	let dispose;
     	const infoicon = new InfoIcon({ $$inline: true });
@@ -999,32 +995,39 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			div1 = element("div");
-    			t1 = text(/*savings*/ ctx[4]);
-    			t2 = text(" kr\n\t\t\t\t\t");
     			div0 = element("div");
     			create_component(infoicon.$$.fragment);
+    			t1 = space();
+    			p = element("p");
+    			t2 = text(/*savings*/ ctx[9]);
+    			t3 = text(" kr");
     			if (img.src !== (img_src_value = "./assets/piggybank.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Sparegris");
-    			attr_dev(img, "class", "svelte-pnqck6");
-    			add_location(img, file$2, 101, 4, 2747);
-    			attr_dev(div0, "class", "infoIcon svelte-pnqck6");
-    			add_location(div0, file$2, 104, 5, 2847);
-    			attr_dev(div1, "class", "savings svelte-pnqck6");
-    			add_location(div1, file$2, 102, 4, 2802);
+    			attr_dev(img, "class", "svelte-164ydgy");
+    			add_location(img, file$2, 101, 4, 2725);
+    			attr_dev(div0, "class", "infoIcon svelte-164ydgy");
+    			add_location(div0, file$2, 103, 5, 2807);
+    			attr_dev(p, "id", "savingamount");
+    			attr_dev(p, "class", "svelte-164ydgy");
+    			add_location(p, file$2, 106, 5, 2905);
+    			attr_dev(div1, "class", "savings svelte-164ydgy");
+    			add_location(div1, file$2, 102, 4, 2780);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, div1, anchor);
-    			append_dev(div1, t1);
-    			append_dev(div1, t2);
     			append_dev(div1, div0);
     			mount_component(infoicon, div0, null);
+    			append_dev(div1, t1);
+    			append_dev(div1, p);
+    			append_dev(p, t2);
+    			append_dev(p, t3);
     			current = true;
     			dispose = listen_dev(div0, "click", /*click_handler_6*/ ctx[28], false, false, false);
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*savings*/ 16) set_data_dev(t1, /*savings*/ ctx[4]);
+    			if (!current || dirty[0] & /*savings*/ 512) set_data_dev(t2, /*savings*/ ctx[9]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1055,7 +1058,7 @@ var app = (function () {
     	return block;
     }
 
-    // (119:6) {#each taskList as item}
+    // (117:6) {#each taskList as item}
     function create_each_block(ctx) {
     	let li0;
     	let t0_value = /*item*/ ctx[30].title + "";
@@ -1074,8 +1077,8 @@ var app = (function () {
     			li1 = element("li");
     			t2 = text(t2_value);
     			t3 = text(" kr");
-    			add_location(li0, file$2, 119, 7, 3265);
-    			add_location(li1, file$2, 120, 7, 3294);
+    			add_location(li0, file$2, 117, 7, 3225);
+    			add_location(li1, file$2, 118, 7, 3254);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -1086,8 +1089,8 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*taskList*/ 128 && t0_value !== (t0_value = /*item*/ ctx[30].title + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*taskList*/ 128 && t2_value !== (t2_value = /*item*/ ctx[30].cost + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*taskList*/ 64 && t0_value !== (t0_value = /*item*/ ctx[30].title + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*taskList*/ 64 && t2_value !== (t2_value = /*item*/ ctx[30].cost + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -1100,7 +1103,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(119:6) {#each taskList as item}",
+    		source: "(117:6) {#each taskList as item}",
     		ctx
     	});
 
@@ -1123,20 +1126,18 @@ var app = (function () {
     	let div2;
     	let p0;
     	let label0;
-    	let strong0;
     	let t4;
     	let t5;
     	let t6;
     	let p1;
     	let label1;
-    	let strong1;
     	let t8;
     	let t9;
     	let t10;
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (!/*regGoal*/ ctx[5]) return create_if_block_1;
+    		if (!/*regGoal*/ ctx[4]) return create_if_block_1;
     		if (!/*achieved*/ ctx[12]) return create_if_block_2;
     		return create_else_block_1;
     	}
@@ -1147,7 +1148,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type_1(ctx, dirty) {
-    		if (!/*showTasklist*/ ctx[6]) return 0;
+    		if (!/*showTasklist*/ ctx[5]) return 0;
     		return 1;
     	}
 
@@ -1170,43 +1171,41 @@ var app = (function () {
     			div2 = element("div");
     			p0 = element("p");
     			label0 = element("label");
-    			strong0 = element("strong");
-    			strong0.textContent = "Sparemål";
+    			label0.textContent = "Sparemål";
     			t4 = space();
     			t5 = text(/*goal*/ ctx[0]);
     			t6 = space();
     			p1 = element("p");
     			label1 = element("label");
-    			strong1 = element("strong");
-    			strong1.textContent = "Restbeløp";
+    			label1.textContent = "Restbeløp";
     			t8 = space();
     			t9 = text(/*diff*/ ctx[11]);
     			t10 = text(" kr");
     			attr_dev(img, "id", "logo");
     			if (img.src !== (img_src_value = "./assets/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			attr_dev(img, "class", "svelte-pnqck6");
-    			add_location(img, file$2, 61, 8, 1196);
-    			attr_dev(header, "class", "svelte-pnqck6");
-    			add_location(header, file$2, 61, 0, 1188);
+    			attr_dev(img, "class", "svelte-164ydgy");
+    			add_location(img, file$2, 61, 8, 1102);
+    			attr_dev(header, "class", "svelte-164ydgy");
+    			add_location(header, file$2, 61, 0, 1094);
     			attr_dev(div0, "id", "inputs");
-    			attr_dev(div0, "class", "svelte-pnqck6");
-    			add_location(div0, file$2, 65, 2, 1284);
-    			attr_dev(div1, "class", "pig svelte-pnqck6");
-    			add_location(div1, file$2, 99, 3, 2698);
-    			add_location(strong0, file$2, 128, 14, 3409);
-    			add_location(label0, file$2, 128, 7, 3402);
-    			add_location(p0, file$2, 128, 4, 3399);
-    			add_location(strong1, file$2, 129, 14, 3469);
-    			add_location(label1, file$2, 129, 7, 3462);
-    			add_location(p1, file$2, 129, 4, 3459);
+    			attr_dev(div0, "class", "svelte-164ydgy");
+    			add_location(div0, file$2, 65, 2, 1190);
+    			attr_dev(div1, "class", "pig svelte-164ydgy");
+    			add_location(div1, file$2, 99, 3, 2676);
+    			attr_dev(label0, "class", "svelte-164ydgy");
+    			add_location(label0, file$2, 126, 7, 3362);
+    			add_location(p0, file$2, 126, 4, 3359);
+    			attr_dev(label1, "class", "svelte-164ydgy");
+    			add_location(label1, file$2, 127, 7, 3405);
+    			add_location(p1, file$2, 127, 4, 3402);
     			attr_dev(div2, "id", "goal");
-    			attr_dev(div2, "class", "svelte-pnqck6");
-    			add_location(div2, file$2, 127, 3, 3379);
-    			attr_dev(div3, "class", "piggybank svelte-pnqck6");
-    			add_location(div3, file$2, 98, 2, 2671);
-    			attr_dev(main, "class", "svelte-pnqck6");
-    			add_location(main, file$2, 63, 0, 1257);
+    			attr_dev(div2, "class", "svelte-164ydgy");
+    			add_location(div2, file$2, 125, 3, 3339);
+    			attr_dev(div3, "class", "piggybank svelte-164ydgy");
+    			add_location(div3, file$2, 98, 2, 2649);
+    			attr_dev(main, "class", "svelte-164ydgy");
+    			add_location(main, file$2, 63, 0, 1163);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1226,13 +1225,11 @@ var app = (function () {
     			append_dev(div3, div2);
     			append_dev(div2, p0);
     			append_dev(p0, label0);
-    			append_dev(label0, strong0);
     			append_dev(p0, t4);
     			append_dev(p0, t5);
     			append_dev(div2, t6);
     			append_dev(div2, p1);
     			append_dev(p1, label1);
-    			append_dev(label1, strong1);
     			append_dev(p1, t8);
     			append_dev(p1, t9);
     			append_dev(p1, t10);
@@ -1310,17 +1307,17 @@ var app = (function () {
     const click_handler = event => event.target.value = "";
 
     function instance($$self, $$props, $$invalidate) {
-    	let goal = "Lego"; //tøm for å restarte
+    	let goal = "";
     	let savinggoal;
-    	let cost = "200"; //bytt til 0 for å restarte
+    	let cost = "";
     	let savingcost;
-    	let savings = 0;
-    	let regGoal = true; //bytt til false for å restarte
+    	let regGoal = false;
     	let showTasklist = false;
     	let taskList = [];
     	let task;
     	let taskPrice = 10;
-    	let animationOn = false;
+    	let savings = 0;
+    	let showAnimation = false;
 
     	const startSaving = () => {
     		if (savinggoal.value == "" && savingcost.value == 0) {
@@ -1329,32 +1326,32 @@ var app = (function () {
     			return;
     		}
 
-    		$$invalidate(5, regGoal = true);
+    		$$invalidate(4, regGoal = true);
     	};
 
     	const addTask = () => {
-    		if (task.value == "" && animationOn) {
-    			$$invalidate(8, task.placeholder = "Du må fylle inn arbeidsoppgave", task);
+    		if (task.value == "") {
+    			$$invalidate(7, task.placeholder = "Du må fylle inn arbeidsoppgave", task);
     			return;
     		}
 
-    		$$invalidate(10, animationOn = true);
-    		$$invalidate(8, task.value = "", task);
+    		$$invalidate(10, showAnimation = true);
+    		$$invalidate(6, taskList = [{ title: task.value, cost: taskPrice }, ...taskList]);
+    		$$invalidate(7, task.value = "", task);
     	};
 
     	const fillPiggybank = () => {
-    		$$invalidate(10, animationOn = false);
-    		$$invalidate(4, savings = savings + taskPrice);
-    		$$invalidate(7, taskList = [{ title: task.value, cost: taskPrice }, ...taskList]);
-    		$$invalidate(9, taskPrice = 10);
+    		$$invalidate(10, showAnimation = false);
+    		$$invalidate(9, savings = savings + taskPrice);
+    		$$invalidate(8, taskPrice = 10);
     	};
 
     	const reset = () => {
-    		$$invalidate(5, regGoal = false);
+    		$$invalidate(4, regGoal = false);
     		$$invalidate(0, goal = "");
     		$$invalidate(2, cost = "");
-    		$$invalidate(4, savings = 0);
-    		$$invalidate(7, taskList = []);
+    		$$invalidate(9, savings = 0);
+    		$$invalidate(6, taskList = []);
     	};
 
     	function input0_binding($$value) {
@@ -1379,21 +1376,21 @@ var app = (function () {
     		$$invalidate(2, cost);
     	}
 
-    	const keydown_handler = e => e.key === "Enter" && startSaving;
+    	const keydown_handler = event => event.key == "Enter" ? startSaving() : "";
 
     	function input_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
-    			$$invalidate(8, task = $$value);
+    			$$invalidate(7, task = $$value);
     		});
     	}
 
-    	const click_handler_1 = () => $$invalidate(9, taskPrice = 10);
-    	const click_handler_2 = () => $$invalidate(9, taskPrice = 20);
-    	const click_handler_3 = () => $$invalidate(9, taskPrice = 50);
-    	const click_handler_4 = () => $$invalidate(9, taskPrice = 100);
+    	const click_handler_1 = () => $$invalidate(8, taskPrice = 10);
+    	const click_handler_2 = () => $$invalidate(8, taskPrice = 20);
+    	const click_handler_3 = () => $$invalidate(8, taskPrice = 50);
+    	const click_handler_4 = () => $$invalidate(8, taskPrice = 100);
     	const click_handler_5 = () => reset();
-    	const click_handler_6 = () => $$invalidate(6, showTasklist = true);
-    	const click_handler_7 = () => $$invalidate(6, showTasklist = false);
+    	const click_handler_6 = () => $$invalidate(5, showTasklist = true);
+    	const click_handler_7 = () => $$invalidate(5, showTasklist = false);
 
     	$$self.$capture_state = () => ({
     		InfoIcon,
@@ -1402,13 +1399,13 @@ var app = (function () {
     		savinggoal,
     		cost,
     		savingcost,
-    		savings,
     		regGoal,
     		showTasklist,
     		taskList,
     		task,
     		taskPrice,
-    		animationOn,
+    		savings,
+    		showAnimation,
     		startSaving,
     		addTask,
     		fillPiggybank,
@@ -1423,13 +1420,13 @@ var app = (function () {
     		if ("savinggoal" in $$props) $$invalidate(1, savinggoal = $$props.savinggoal);
     		if ("cost" in $$props) $$invalidate(2, cost = $$props.cost);
     		if ("savingcost" in $$props) $$invalidate(3, savingcost = $$props.savingcost);
-    		if ("savings" in $$props) $$invalidate(4, savings = $$props.savings);
-    		if ("regGoal" in $$props) $$invalidate(5, regGoal = $$props.regGoal);
-    		if ("showTasklist" in $$props) $$invalidate(6, showTasklist = $$props.showTasklist);
-    		if ("taskList" in $$props) $$invalidate(7, taskList = $$props.taskList);
-    		if ("task" in $$props) $$invalidate(8, task = $$props.task);
-    		if ("taskPrice" in $$props) $$invalidate(9, taskPrice = $$props.taskPrice);
-    		if ("animationOn" in $$props) $$invalidate(10, animationOn = $$props.animationOn);
+    		if ("regGoal" in $$props) $$invalidate(4, regGoal = $$props.regGoal);
+    		if ("showTasklist" in $$props) $$invalidate(5, showTasklist = $$props.showTasklist);
+    		if ("taskList" in $$props) $$invalidate(6, taskList = $$props.taskList);
+    		if ("task" in $$props) $$invalidate(7, task = $$props.task);
+    		if ("taskPrice" in $$props) $$invalidate(8, taskPrice = $$props.taskPrice);
+    		if ("savings" in $$props) $$invalidate(9, savings = $$props.savings);
+    		if ("showAnimation" in $$props) $$invalidate(10, showAnimation = $$props.showAnimation);
     		if ("diff" in $$props) $$invalidate(11, diff = $$props.diff);
     		if ("achieved" in $$props) $$invalidate(12, achieved = $$props.achieved);
     	};
@@ -1442,7 +1439,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*cost, savings*/ 20) {
+    		if ($$self.$$.dirty[0] & /*cost, savings*/ 516) {
     			 $$invalidate(11, diff = cost - savings);
     		}
 
@@ -1450,7 +1447,7 @@ var app = (function () {
     			 $$invalidate(12, achieved = diff <= 0 ? true : false);
     		}
 
-    		if ($$self.$$.dirty[0] & /*taskList*/ 128) {
+    		if ($$self.$$.dirty[0] & /*taskList*/ 64) {
     			 console.log(taskList);
     		}
     	};
@@ -1460,13 +1457,13 @@ var app = (function () {
     		savinggoal,
     		cost,
     		savingcost,
-    		savings,
     		regGoal,
     		showTasklist,
     		taskList,
     		task,
     		taskPrice,
-    		animationOn,
+    		savings,
+    		showAnimation,
     		diff,
     		achieved,
     		startSaving,
