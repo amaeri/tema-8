@@ -1,11 +1,10 @@
 <script>
-	import {fade,fly,scale} from 'svelte/transition'
 	import {InfoIcon} from 'svelte-eva-icons'
 	import {CloseCircleIcon} from 'svelte-eva-icons'
 
-	let goal = '' //tøm for å restarte
+	let goal = 'Lego' //tøm for å restarte
 	let savinggoal
-	let cost = '' //bytt til 0 for å restarte
+	let cost = '200' //bytt til 0 for å restarte
 	let savingcost
 	let savings = 0
 
@@ -13,14 +12,14 @@
 	$: achieved = diff <= 0 ? true : false
 	$: console.log(taskList)
 
-	let regGoal = false //bytt til false for å restarte
+	let regGoal = true //bytt til false for å restarte
 
 	let showTasklist = false
 	let taskList = []
 	let task
 	let taskPrice = 10
 
-	// let fillPiggybank = true
+	let animationOn = false
 		
 	const startSaving = () => {
 		if (savinggoal.value == '' && savingcost.value == 0) {
@@ -32,22 +31,23 @@
 	}
 
 	const addTask = () => {
-		if (task.value == '') {
+		if (task.value == '' && animationOn) {
 			task.placeholder = 'Du må fylle inn arbeidsoppgave'
 			return
 		}
+		animationOn = true
+		task.value = ''
+	}
+
+	const fillPiggybank = () => {
+		animationOn = false
 		savings = savings + taskPrice
 		taskList = [{
 			title: task.value,
 			cost: taskPrice
 		}, ...taskList]
-		task.value = ''
 		taskPrice = 10
 	}
-
-	// const piggyFilled = () => {
-	// 	fillPiggybank = false
-	// }
 
 	const reset = () => {
 		regGoal = false
@@ -71,19 +71,21 @@
 
 			<input type="number" bind:this={savingcost} bind:value={cost} placeholder="Kostnad">
 
-			<button class="next" on:click={startSaving}>Neste</button>
+			<button class="next" on:click={startSaving} on:keydown={e => e.key === 'Enter' && startSaving}>Neste</button>
 		{:else}
 			{#if !achieved}
 <!-- Arbeidsoppgaver -->
 				<p>Registrer arbeidsoppgave og beløp</p>
 				<input bind:this={task} placeholder='Arbeidsoppgave'/>
-				<div id="amountbuttons">
+				<div id="amountbuttons" >
 					<img src="./assets/ti.png" alt="ti" on:click={()=>taskPrice=10} on:click={addTask}>
 					<img src="./assets/tyve.png" alt="tyve" on:click={()=>taskPrice=20} on:click={addTask}>
 					<img src="./assets/femti.png" alt="femti" on:click={()=>taskPrice=50} on:click={addTask}>
 					<img src="./assets/hundre.png" alt="hundre" on:click={()=>taskPrice=100} on:click={addTask}>
-<!-- Animasjon -->
-					<!-- <div id="animation"><img src="./assets/krone.png" alt="kronestykke"></div> -->
+
+<!-- Animasjon -->	{#if animationOn}
+					<div on:animationend={fillPiggybank} id="animation"><img src="./assets/krone.png" alt="kronestykke"></div>
+					{/if}
 				</div>
 			{:else}
 <!-- Fullført -->
@@ -213,6 +215,29 @@
 	#amountbuttons img {
 		width: 4rem;
      	background-size: cover;
+		z-index: 1;
+	}
+
+
+	/* ANIMATION */
+	#animation img {
+		width: 4.5vw;
+	}
+
+	#animation {
+		position: absolute;
+		top: -10vh;
+		right: 18vw;
+		animation-name: fillPiggybank;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		z-index: 1;
+	}
+
+	@keyframes fillPiggybank {
+		to {
+			transform: translateY(210px) rotate(1turn);
+		}
 	}
 
 	/* GOAL COMPLETED */
@@ -298,25 +323,6 @@
 		cursor: pointer;
 		margin-left: 20rem;
 	}
-
-	/* ANIMATION */
-	/* #animation img {
-		width: 3vw;
-	}
-
-	#animation {
-		position: absolute;
-		top: 0;
-		right: 17rem;
-		animation: coinFalling 1s linear forwards;
-		z-index: 1;
-	}
-
-	@keyframes coinFalling {
-		to {
-			transform: translateY(250px);
-		}
-	} */
 
 
 	/* MEDIA */
